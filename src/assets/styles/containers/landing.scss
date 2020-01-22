@@ -1,0 +1,13 @@
+@import '../color-palette.scss';
+
+.section {
+  position: relative;
+  text-align: center;
+  &__dark {
+    background-color: $light-black;
+  }
+}
+
+#fp-nav.fp-right {
+  display: none !important;
+}

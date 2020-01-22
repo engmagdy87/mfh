@@ -1,0 +1,87 @@
+@import '../color-palette.scss';
+
+.strategic-home-wrapper {
+  height: inherit;
+  &__canvas {
+    position: relative;
+    background-image: url('~@/assets/images/spot-pic.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 96%;
+    height: 90%;
+    margin: auto;
+  }
+  &__shape {
+    position: absolute;
+    bottom: -45%;
+    left: -57%;
+  }
+  &__titles {
+    position: absolute;
+    bottom: 42%;
+    left: 25%;
+    display: block;
+    line-height: 40px;
+    text-align: left;
+    h1 {
+      color: $light-cyan;
+      font-size: 70px;
+      opacity: 0.7;
+    }
+    h2 {
+      font-size: 30px;
+      color: $light-cyan;
+      margin-left: 40px;
+      opacity: 0.7;
+    }
+  }
+  &__content {
+    position: absolute;
+    bottom: 20%;
+    right: 17%;
+    width: 60%;
+    .column {
+      text-align: justify;
+      text-justify: inter-cluster;
+      color: $gray;
+    }
+  }
+}
+
+.st0 {
+  fill: #e3f9ff;
+  opacity: 0.1;
+}
+.st1 {
+  fill: #c4dded;
+  opacity: 0.1;
+}
+.st2 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  fill: #8099a9;
+}
+.st4 {
+  fill: #ffffff;
+}
+.st5 {
+  fill: #989898;
+}
+.st6 {
+  fill: #666666;
+}
+.st7 {
+  fill: #3c3c3b;
+}
+.st8 {
+  fill: none;
+}
+.st9 {
+  fill: none;
+  stroke: #e3f9ff;
+  stroke-miterlimit: 10;
+}

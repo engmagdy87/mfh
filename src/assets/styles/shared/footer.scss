@@ -1,0 +1,29 @@
+@import '../color-palette.scss';
+
+$background-time: 6s;
+
+.footer-wrapper {
+  position: absolute;
+  bottom: 90px;
+  left: 46%;
+  &__inner {
+    position: absolute;
+    bottom: 90px;
+    left: 50px;
+  }
+}
+
+span,
+strong {
+  font-size: 10px;
+  color: $light-black;
+  animation-name: background-keyframes;
+  animation-duration: $background-time;
+  animation-fill-mode: forwards;
+}
+
+@keyframes background-keyframes {
+  100% {
+    color: $gray;
+  }
+}

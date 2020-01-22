@@ -1,0 +1,91 @@
+@import '../color-palette.scss';
+
+$item-time: 6s;
+
+.header-wrapper {
+  position: absolute;
+  top: 5%;
+  width: 88%;
+  margin-left: 4%;
+  background: transparent;
+  height: 80px;
+}
+
+.svg-logo {
+  height: 60px !important;
+  margin: 20px 0px;
+  fill: $light-black;
+  &--animate-logo {
+    animation-name: logo-keyframes;
+    animation-duration: $item-time;
+    animation-fill-mode: forwards;
+  }
+  &--light-logo {
+    fill: $gray;
+  }
+}
+
+.navbar-item {
+  text-transform: uppercase !important;
+  margin-right: 30px;
+  color: $gray;
+}
+
+.navbar-link {
+  text-transform: uppercase !important;
+  color: $gray;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: $gray;
+}
+
+.navbar-end {
+  padding-right: 10%;
+}
+
+@keyframes logo-keyframes {
+  100% {
+    fill: $gray;
+  }
+}
+
+a.light-theme:focus,
+a.light-theme:focus-within,
+a.light-theme:hover,
+a.light-theme.is-active,
+.light-theme-dropdown:focus,
+.light-theme-dropdown:focus-within,
+.light-theme-dropdown:hover,
+.light-theme-dropdown.is-active {
+  background-color: transparent;
+  color: $light-black;
+}
+
+.navbar-dropdown,
+.light-theme.has-dropdown:focus .light-theme-dropdown,
+.light-theme.has-dropdown:hover .light-theme-dropdown,
+.light-theme.has-dropdown.is-active .light-theme-dropdown {
+  background-color: transparent;
+  color: $light-black;
+}
+
+a.dark-theme:focus,
+a.dark-theme:focus-within,
+a.dark-theme:hover,
+a.dark-theme.is-active,
+.dark-theme-dropdown:focus,
+.dark-theme-dropdown:focus-within,
+.dark-theme-dropdown:hover,
+.dark-theme-dropdown.is-active {
+  background-color: transparent;
+  color: $light-cyan;
+}
+
+.navbar-dropdown,
+.dark-theme.has-dropdown:focus .dark-theme-dropdown,
+.dark-theme.has-dropdown:hover .dark-theme-dropdown,
+.dark-theme.has-dropdown.is-active .dark-theme-dropdown {
+  background-color: transparent;
+  color: $light-cyan;
+}

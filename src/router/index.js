@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router';
-import Home from '@/containers/Home.vue';
+import Landing from '@/containers/Landing.vue';
 
 export const routes = [
-    { path: '/', name: 'home', component: Home },
-    { path: '*', component: Home }
+    { path: '/', name: 'landing', component: Landing },
+    { path: '*', component: Landing }
 ];
 
 const router = new VueRouter({ routes, mode: 'history' });

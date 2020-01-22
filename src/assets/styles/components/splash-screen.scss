@@ -1,0 +1,140 @@
+$triangle-time: 6s;
+$text-time: 6s;
+$hat-time: 6s;
+
+.splash-screen-wrapper {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  svg {
+    display: inline-block;
+    margin: auto;
+    height: 90%;
+    width: 100%;
+  }
+  &__footer {
+    position: absolute;
+    bottom: 120px;
+    left: 47%;
+    img {
+      height: 50px;
+      margin: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.st0 {
+  fill: #e3f9ff;
+}
+.st1 {
+  fill: #c4dded;
+}
+
+// Triangle 1
+.st11 {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation-name: logo-keyframes;
+  animation-duration: $triangle-time;
+  transform: rotateX(180deg);
+  animation-iteration-count: infinite;
+}
+
+// Triangle 2
+.st12 {
+  transform-origin: top;
+  transform-box: fill-box;
+  animation-name: logo-keyframes;
+  animation-duration: $triangle-time;
+  transform: rotateX(180deg);
+  animation-iteration-count: infinite;
+}
+
+// Hat 1
+.st21 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+  transform-origin: bottom;
+  animation-name: hat-keyframes;
+  animation-duration: $hat-time;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+// Hat 2
+.st22 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+  transform-origin: top;
+  animation-name: hat-keyframes;
+  animation-duration: $hat-time;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+// Text 1
+.st2 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+  animation-duration: $text-time;
+  animation-name: text-keyframes;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+// Text 2
+.st3 {
+  fill: #8099a9;
+  animation-duration: $text-time;
+  animation-name: text-keyframes;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.st4 {
+  fill: #ffffff;
+}
+.st5 {
+  fill: #989898;
+}
+.st6 {
+  fill: #666666;
+}
+.st7 {
+  fill: #3c3c3b;
+}
+.st8 {
+  fill: none;
+}
+
+@keyframes logo-keyframes {
+  50% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes hat-keyframes {
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text-keyframes {
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+}

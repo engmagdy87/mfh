@@ -51,7 +51,7 @@ module.exports = {
                 props: false
             }
         ],
-        'no-console': 2,
+        'no-console': 0,
         'import/prefer-default-export': 0,
         import: 0,
         'func-names': 0,

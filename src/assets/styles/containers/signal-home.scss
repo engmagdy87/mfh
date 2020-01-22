@@ -1,0 +1,89 @@
+@import '../color-palette.scss';
+
+$signal-time: 3s;
+$background-time: 6s;
+$background-delay: 10s;
+$delay-time-offset: 0.1s;
+
+.signal-home-wrapper {
+  height: inherit;
+  &__canvas {
+    position: relative;
+    display: block;
+    width: 96%;
+    height: 90%;
+    margin: auto;
+    background-color: $light-cyan;
+    animation-name: background-keyframes;
+    animation-duration: $background-time;
+    animation-delay: $background-time;
+    animation-fill-mode: forwards;
+    svg {
+      display: inline-block;
+      margin: auto;
+    }
+  }
+}
+
+.st0 {
+  fill: #e3f9ff;
+}
+.st1 {
+  fill: #c4dded;
+}
+.st2 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  fill: #8099a9;
+}
+.st4 {
+  fill: #ffffff;
+}
+.st5 {
+  fill: #989898;
+}
+.st6 {
+  fill: #666666;
+}
+.st7 {
+  fill: #3c3c3b;
+}
+.st8 {
+  fill: none;
+}
+
+.signal {
+  opacity: 0;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+}
+
+@for $i from 0 to 48 {
+  .signal#{$i} {
+    animation-delay: $i * $delay-time-offset;
+  }
+}
+
+@keyframes signal-keyframes {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes background-keyframes {
+  100% {
+    background-color: $light-black;
+  }
+}
+
+.explore-more {
+  cursor: pointer !important;
+  background-color: red;
+}
