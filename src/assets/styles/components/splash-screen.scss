@@ -12,6 +12,10 @@ $hat-time: 6s;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include is-mobile {
+    // Android Google Chrome Height Page Bottom Hide Fix
+    height: 100%;
+  }
   svg {
     display: inline-block;
     margin: auto;

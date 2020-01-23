@@ -5,6 +5,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
+  @include is-mobile {
+    // Android Google Chrome Height Page Bottom Hide Fix
+    height: 100%;
+  }
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -20,6 +24,8 @@
     position: relative;
     @include is-mobile {
       padding: 8%;
+      // Android Google Chrome Height Page Bottom Hide Fix
+      height: 100%;
     }
     &__dark {
       background-color: $light-black;
