@@ -1,4 +1,5 @@
 @import '../color-palette.scss';
+@import '../mixins.scss';
 
 .landing-wrapper {
   overflow-y: scroll;
@@ -17,6 +18,9 @@
     padding: 5%;
     scroll-snap-align: start;
     position: relative;
+    @include is-mobile {
+      padding: 8%;
+    }
     &__dark {
       background-color: $light-black;
     }
