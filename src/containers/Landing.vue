@@ -1,35 +1,23 @@
 <template>
-  <div>
-    <full-page
-      id="fullpage"
-      :options="options"
-      ref="fullpage"
-      class="landing-wrapper__sections"
+  <div class="landing-wrapper">
+    <div id="home" class="landing-wrapper__section">
+      <Header :isLogoAnimated="true" activeItem="home" />
+      <SignalHome />
+    </div>
+    <div
+      id="vision"
+      class="landing-wrapper__section landing-wrapper__section__dark"
     >
-      <div class="section">
-        <Header :isLogoAnimated="true" />
-        <SignalHome />
-      </div>
-      <div class="section section__dark">
-        <Header :isLightLogo="true" />
-        <VisionHome />
-      </div>
-      <div class="section section__dark">
-        <Header :isLightLogo="true" />
-        <StrategicHome />
-      </div>
-      <div class="section section__dark">
-        <div class="slide">
-          <h3>Slide 2.1</h3>
-        </div>
-        <div class="slide">
-          <h3>Slide 2.2</h3>
-        </div>
-        <div class="slide">
-          <h3>Slide 2.3</h3>
-        </div>
-      </div>
-    </full-page>
+      <Header :isLightLogo="true" activeItem="home" />
+      <VisionHome />
+    </div>
+    <div
+      id="strategy"
+      class="landing-wrapper__section landing-wrapper__section__dark"
+    >
+      <Header :isLightLogo="true" activeItem="home" />
+      <StrategicHome />
+    </div>
   </div>
 </template>
 
@@ -40,16 +28,12 @@ import VisionHome from '../containers/Home/VisionHome';
 import StrategicHome from '../containers/Home/StrategicHome';
 
 export default {
-  data: function() {
-    return {
-      options: {
-        afterLoad: this.afterLoad,
-        navigation: true,
-        anchors: ['page1', 'page2', 'page3']
-      }
-    };
-  },
-  components: { SignalHome, VisionHome, StrategicHome, Header }
+  components: {
+    SignalHome,
+    VisionHome,
+    StrategicHome,
+    Header
+  }
 };
 </script>
 

@@ -41,22 +41,47 @@ $link-focus-border: $primary;
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 
+@font-face {
+  font-family: 'Chronicle Display Extra Light';
+  src: url('~@/assets/fonts/ChronicleDisp-XLight.otf');
+}
+
+@font-face {
+  font-family: 'Neue Montreal Regular';
+  src: url('~@/assets/fonts/NeueMontreal-Regular.otf');
+}
+
 html {
   -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   margin: 0 !important;
   padding: 0 !important;
-  height: 100vh;
+  height: 100%;
   font-family: 'Roboto', sans-serif !important;
+  overflow: hidden;
 }
 
 .app-wrapper {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
+  letter-spacing: 3px;
+}
+
+h1,
+h2 {
+  font-family: 'Chronicle Display Extra Light';
+}
+
+p,
+a {
+  font-family: 'Neue Montreal Regular';
 }

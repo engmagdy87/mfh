@@ -1,25 +1,23 @@
 @import '../color-palette.scss';
+@import '../mixins.scss';
 
 .strategic-home-wrapper {
-  height: inherit;
-  &__canvas {
-    position: relative;
-    background-image: url('~@/assets/images/spot-pic.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 96%;
-    height: 90%;
-    margin: auto;
-  }
+  position: relative;
+  background-image: url('~@/assets/images/spot-pic.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
   &__shape {
     position: absolute;
-    bottom: -45%;
-    left: -57%;
+    top: 43%;
+    left: 12%;
   }
   &__titles {
     position: absolute;
-    bottom: 42%;
+    top: 50%;
     left: 25%;
     display: block;
     line-height: 40px;
@@ -38,13 +36,71 @@
   }
   &__content {
     position: absolute;
-    bottom: 20%;
-    right: 17%;
+    top: 62%;
+    left: 24.5%;
     width: 60%;
     .column {
       text-align: justify;
       text-justify: inter-cluster;
       color: $gray;
+    }
+  }
+}
+
+@include is-mobile {
+  .strategic-home-wrapper {
+    background-image: none;
+    &__shape {
+      display: none;
+    }
+    &__titles {
+      top: 27%;
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 25px;
+      }
+    }
+    &__content {
+      top: 42%;
+      left: 9%;
+      width: 90%;
+      overflow-y: auto;
+      height: 300px;
+      &::-webkit-scrollbar {
+        width: 3px !important;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray;
+        border-radius: 4.5px !important;
+      }
+
+      .column {
+        text-align: justify;
+        text-justify: inter-cluster;
+        color: $gray;
+      }
+    }
+  }
+}
+@include is-tablet {
+  .strategic-home-wrapper {
+    background-image: none;
+    &__shape {
+      display: none;
+    }
+    &__titles {
+      top: 30%;
+    }
+    &__content {
+      top: 42%;
+      width: 60%;
+      .column {
+        text-align: justify;
+        text-justify: inter-cluster;
+        color: $gray;
+      }
     }
   }
 }

@@ -1,27 +1,18 @@
 <template>
   <div class="signal-home-wrapper">
-    <div class="signal-home-wrapper__canvas">
-      <Signal />
-      <SlideDownIcon />
-      <Footer :innerPage="true" />
-    </div>
+    <Signal />
+    <SlideDownIcon />
+    <Footer :innerPage="true" />
   </div>
 </template>
 
 <script>
 import Footer from '../../shared/Footer';
 import SlideDownIcon from '../../shared/SlideDownIcon';
-import Signal from '../../assets/images/360.svg';
+import Signal from '../../assets/images/svg/360';
 
 export default {
-  components: { Footer, Signal, SlideDownIcon },
-  mounted() {
-    document
-      .getElementsByClassName('explore-more')[0]
-      .addEventListener('click', () => {
-        location.hash = '#page2';
-      });
-  }
+  components: { Footer, Signal, SlideDownIcon }
 };
 </script>
 

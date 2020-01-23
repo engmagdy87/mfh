@@ -1,11 +1,12 @@
 @import '../color-palette.scss';
+@import '../mixins.scss';
 
 $background-time: 6s;
 
 .footer-wrapper {
   position: absolute;
-  bottom: 90px;
-  left: 46%;
+  bottom: -30px;
+  // left: 46%;
   &__inner {
     position: absolute;
     bottom: 90px;
@@ -26,4 +27,26 @@ strong {
   100% {
     color: $gray;
   }
+}
+
+@include is-mobile {
+  .footer-wrapper {
+    bottom: -30px;
+    // left: 32%;
+    &__inner {
+      bottom: 20px;
+      left: 5%;
+    }
+  }
+}
+@include is-tablet {
+  .navbar-end {
+    display: none;
+  }
+}
+@include is-desktop {
+  top: 25%;
+}
+@include is-large-desktop {
+  top: 12.5%;
 }

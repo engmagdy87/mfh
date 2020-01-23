@@ -1,13 +1,24 @@
 @import '../color-palette.scss';
 
-.section {
-  position: relative;
-  text-align: center;
-  &__dark {
-    background-color: $light-black;
-  }
-}
+.landing-wrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
-#fp-nav.fp-right {
-  display: none !important;
+  &::-webkit-scrollbar {
+    width: 0px !important;
+  }
+
+  &__section {
+    height: 100vh;
+    padding: 5%;
+    scroll-snap-align: start;
+    position: relative;
+    &__dark {
+      background-color: $light-black;
+    }
+  }
 }

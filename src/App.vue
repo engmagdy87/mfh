@@ -40,5 +40,4 @@ export default {
 
 <style lang="scss">
 @import './assets/styles/app.scss';
-@import url('https://unpkg.com/fullpage.js/dist/fullpage.min.css');
 </style>

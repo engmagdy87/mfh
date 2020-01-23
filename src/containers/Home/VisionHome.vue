@@ -7,18 +7,18 @@
         <h1>Statement</h1>
       </div>
       <div class="columns is-desktop strategic-home-wrapper__content">
-        <div class="column">
+        <p class="column">
           Our vision is to be the most admired investment partner in the MENA
           region.
-        </div>
-        <div class="column">
+        </p>
+        <p class="column">
           Our vision is to be the most admired investment partner in the MENA
           region.
-        </div>
-        <div class="column">
+        </p>
+        <p class="column">
           Our vision is to be the most admired investment partner in the MENA
           region.
-        </div>
+        </p>
       </div>
       <Footer :innerPage="true" />
     </div>

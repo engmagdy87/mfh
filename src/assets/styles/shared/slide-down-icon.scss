@@ -1,4 +1,5 @@
 @import '../color-palette.scss';
+@import '../mixins.scss';
 
 $background-time: 6s;
 
@@ -6,6 +7,10 @@ $background-time: 6s;
   position: absolute;
   bottom: 180px;
   left: 40px;
+  @include is-mobile {
+    bottom: 60px;
+    left: 10px;
+  }
   &__icon {
     position: relative;
     width: 22px;
@@ -15,6 +20,10 @@ $background-time: 6s;
     animation-name: background-keyframes;
     animation-duration: $background-time;
     animation-fill-mode: forwards;
+    @include is-mobile {
+      width: 15px;
+      height: 24px;
+    }
   }
   &__icon::after {
     position: absolute;
@@ -27,6 +36,11 @@ $background-time: 6s;
     border-radius: 10px;
     animation: mouse 2s infinite, background-keyframes $background-time;
     animation-fill-mode: forwards;
+    @include is-mobile {
+      width: 3px;
+      height: 3px;
+      left: 4px;
+    }
   }
   &__up-line {
     border-left: 1px solid $light-black;
@@ -36,6 +50,10 @@ $background-time: 6s;
     animation-name: background-keyframes;
     animation-duration: $background-time;
     animation-fill-mode: forwards;
+    @include is-mobile {
+      height: 40px;
+      margin-left: 7px;
+    }
   }
   &__down-line {
     border-left: 1px solid $light-black;
@@ -45,6 +63,10 @@ $background-time: 6s;
     animation-name: background-keyframes;
     animation-duration: $background-time;
     animation-fill-mode: forwards;
+    @include is-mobile {
+      height: 20px;
+      margin-left: 7px;
+    }
   }
 }
 

@@ -2,20 +2,22 @@
   <div class="splash-screen-wrapper">
     <Slogan />
     <div class="splash-screen-wrapper__footer">
-      <img src="../assets/images/logo-light.png" />
+      <MFHLogo class="mfh-logo" />
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 import Footer from '../shared/Footer';
 import Slogan from '../assets/images/slogan-open.svg';
+import MFHLogo from '../assets/images/logo-dark.svg';
 
 export default {
   components: {
     Footer,
-    Slogan
+    Slogan,
+    MFHLogo
   }
 };
 </script>

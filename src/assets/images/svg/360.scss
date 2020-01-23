@@ -1,0 +1,59 @@
+$signal-time: 3s;
+$delay-time-offset: 0.1s;
+
+.st0 {
+  fill: #e3f9ff;
+}
+.st1 {
+  fill: #c4dded;
+}
+.st2 {
+  fill: none;
+  stroke: #8099a9;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  fill: #8099a9;
+}
+.st4 {
+  fill: #ffffff;
+}
+.st5 {
+  fill: #989898;
+}
+.st6 {
+  fill: #666666;
+}
+.st7 {
+  fill: #3c3c3b;
+}
+.st8 {
+  fill: none;
+}
+
+.signal {
+  opacity: 0;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+}
+
+@for $i from 0 to 48 {
+  .signal#{$i} {
+    animation-delay: $i * $delay-time-offset;
+  }
+}
+
+@keyframes signal-keyframes {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.explore-more {
+  cursor: pointer !important;
+  background-color: red;
+}
