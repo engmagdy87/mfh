@@ -57,6 +57,16 @@ $item-time: 6s;
       color: $light-cyan;
     }
   }
+  &__is-active {
+    .light-theme {
+      color: $light-black !important;
+      transition: color 2s ease-in;
+    }
+    .dark-theme {
+      color: $light-cyan !important;
+      transition: color 2s ease-in;
+    }
+  }
 
   @include is-desktop {
     top: 25%;
@@ -139,7 +149,10 @@ li.dropdown {
   font-size: 0.875rem;
 }
 
-.dropdown-content a:hover {
+.dropdown-content .light-theme:hover {
+  color: $light-black;
+}
+.dropdown-content .dark-theme:hover {
   color: $light-cyan;
 }
 

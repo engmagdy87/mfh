@@ -7,7 +7,7 @@
 				<g class="explore-more">
 					<g>
 						<g>
-							<rect x="282.941" y="219.479" width="70.377" height="10.777" class="st4"/>
+							<rect x="282.941" y="219.479" width="70.377" height="10.777" class="st4 explore-bg"/>
 						</g>
 						<g>
 							<path d="M353.558,230.495h-70.855v-11.255h70.855V230.495z M283.181,230.017h69.898v-10.299h-69.898V230.017z" class="st5"/>

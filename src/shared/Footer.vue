@@ -1,6 +1,11 @@
 <template>
   <div :class="[innerPage ? 'footer-wrapper__inner' : 'footer-wrapper']">
-    <span>Part of <strong>Medaf Investments</strong></span>
+    <span
+      >Part of
+      <a href="http://www.medafinvestment.com/" target="__blank"
+        ><strong>Medaf Investments</strong></a
+      ></span
+    >
   </div>
 </template>
 

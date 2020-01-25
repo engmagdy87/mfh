@@ -40,4 +40,5 @@ export default {
 
 <style lang="scss">
 @import './assets/styles/app.scss';
+@import './assets/styles/grid-layout.scss';
 </style>

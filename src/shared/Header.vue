@@ -15,14 +15,19 @@
       <li
         :class="[
           'header-wrapper__item',
-          activeItem === 'home' ? 'is-active' : ''
+          activeItem === 'home' ? 'header-wrapper__is-active' : ''
         ]"
       >
         <a href="#home" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
           home
         </a>
       </li>
-      <li :class="['dropdown', activeItem === 'about' ? 'is-active' : '']">
+      <li
+        :class="[
+          'dropdown',
+          activeItem === 'about' ? 'header-wrapper__is-active' : ''
+        ]"
+      >
         <a
           href="javascript:void(0)"
           :class="[
@@ -50,7 +55,7 @@
       <li
         :class="[
           'header-wrapper__item',
-          activeItem === 'services' ? 'is-active' : ''
+          activeItem === 'services' ? 'header-wrapper__is-active' : ''
         ]"
       >
         <a
@@ -62,7 +67,7 @@
       <li
         :class="[
           'header-wrapper__item',
-          activeItem === 'contact' ? 'is-active' : ''
+          activeItem === 'contact' ? 'header-wrapper__is-active' : ''
         ]"
       >
         <a

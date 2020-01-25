@@ -6,7 +6,6 @@ $background-time: 6s;
 .footer-wrapper {
   position: absolute;
   bottom: -30px;
-  // left: 46%;
   &__inner {
     position: absolute;
     bottom: 90px;
@@ -18,6 +17,7 @@ span,
 strong {
   font-size: 10px;
   color: $light-black;
+  letter-spacing: 1px;
   animation-name: background-keyframes;
   animation-duration: $background-time;
   animation-fill-mode: forwards;
