@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import Header from '../shared/Header';
-import SignalHome from '../containers/Home/SignalHome';
-import VisionHome from '../containers/Home/VisionHome';
-import StrategicHome from '../containers/Home/StrategicHome';
+const Header = () => import('../shared/Header');
+const SignalHome = () => import('../containers/Home/SignalHome');
+const VisionHome = () => import('../containers/Home/VisionHome');
+const StrategicHome = () => import('../containers/Home/StrategicHome');
 
 export default {
   components: {

@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Footer from '../../shared/Footer';
-import Shape from '../../assets/images/shape.svg';
+const Footer = () => import('../../shared/Footer');
+const Shape = () => import('../../assets/images/shape.svg');
 
 export default {
   components: { Footer, Shape }

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SplashScreen from './components/SplashScreen';
+const SplashScreen = () => import('./components/SplashScreen');
 
 export default {
   name: 'app',

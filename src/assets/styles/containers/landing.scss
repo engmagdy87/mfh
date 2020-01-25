@@ -1,13 +1,14 @@
 @import '../color-palette.scss';
+@import '../variables.scss';
 @import '../mixins.scss';
 
 .landing-wrapper {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100vh;
+  height: $wrapper-height-desktop;
   @include is-mobile {
     // Android Google Chrome Height Page Bottom Hide Fix
-    height: 100%;
+    height: $wrapper-height-mobile;
   }
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -18,14 +19,15 @@
   }
 
   &__section {
-    height: 100vh;
-    padding: 5%;
+    height: $wrapper-height-desktop;
+    padding: $wrapper-padding-desktop;
     scroll-snap-align: start;
     position: relative;
+    box-sizing: border-box;
     @include is-mobile {
-      padding: 8%;
+      padding: $wrapper-padding-mobile;
       // Android Google Chrome Height Page Bottom Hide Fix
-      height: 100%;
+      height: $wrapper-height-mobile;
     }
     &__dark {
       background-color: $light-black;

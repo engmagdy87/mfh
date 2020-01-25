@@ -18,9 +18,8 @@ $background-delay: 10s;
   }
 }
 
-
-        @keyframes background-keyframes {
-          100% {
-            background-color: $light-black;
-          }
-        }
+@keyframes background-keyframes {
+  100% {
+    background-color: $light-black;
+  }
+}
