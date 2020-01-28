@@ -3,7 +3,6 @@
 
 .strategic-home-wrapper {
   position: relative;
-  background-image: url('~@/assets/images/spot-pic.webp');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -49,12 +48,6 @@
 
 @include is-mobile {
   .strategic-home-wrapper {
-    background-image: linear-gradient(
-        to bottom left,
-        rgba(255, 255, 255, 0.12),
-        rgba(0, 0, 0, 0.75)
-      ),
-      url('~@/assets/images/spot-pic-mob.webp');
     background-size: cover;
     background-position: top;
     &__shape {
@@ -96,12 +89,6 @@
 }
 @include is-tablet {
   .strategic-home-wrapper {
-    background-image: linear-gradient(
-        to bottom left,
-        rgba(255, 255, 255, 0.12),
-        rgba(0, 0, 0, 0.75)
-      ),
-      url('~@/assets/images/spot-pic-mob.webp');
     background-size: auto;
     background-position: top;
     &__shape {
@@ -122,12 +109,6 @@
 }
 @include is-desktop {
   .strategic-home-wrapper {
-    background-image: linear-gradient(
-        to bottom left,
-        rgba(255, 255, 255, 0.12),
-        rgba(0, 0, 0, 0.75)
-      ),
-      url('~@/assets/images/spot-pic-mob.webp');
     background-size: auto;
     background-position: top;
     &__shape {

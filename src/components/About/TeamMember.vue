@@ -10,7 +10,11 @@
       @click="onCardClicked"
     >
       <img
-        :src="require(`@/assets/images/team/${member.image}`)"
+        :src="
+          require(`@/assets/images/team/${
+            isWebpSupportedFlag ? member.imageWebp : member.imageJpg
+          }`)
+        "
         class="team-member-wrapper__card__img"
       />
       <p class="team-member-wrapper__card__name">
@@ -45,6 +49,7 @@
 </template>
 
 <script>
+import isWebpSupported from '../../helper/WebpDetectionHelper';
 import Antivirus from '../../assets/images/svg/antivirus.svg';
 import StarMedal from '../../assets/images/svg/star-medal.svg';
 import Trophy from '../../assets/images/svg/trophy.svg';
@@ -59,7 +64,8 @@ export default {
   ],
   data() {
     return {
-      isCardClicked: false
+      isCardClicked: false,
+      isWebpSupportedFlag: null
     };
   },
   methods: {
@@ -97,6 +103,11 @@ export default {
     Antivirus,
     StarMedal,
     Trophy
+  },
+  mounted() {
+    (async () => {
+      this.isWebpSupportedFlag = await isWebpSupported();
+    })();
   }
 };
 </script>

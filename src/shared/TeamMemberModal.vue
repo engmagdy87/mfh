@@ -19,6 +19,7 @@ export default {
     },
 
     closeNav() {
+      document.getElementById('team-member-modal').scrollTop = 0;
       document.getElementById('team-member-modal').style.height = '0%';
       this.closeModal();
     }

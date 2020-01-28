@@ -7,7 +7,15 @@
           isOurPeopleClicked ? 'people-about-wrapper__description__reduced' : ''
         ]"
       >
-        <div class="people-about-wrapper__hero-img"></div>
+        <div
+          class="people-about-wrapper__hero-img"
+          v-if="isWebpSupportedFlag !== null"
+          :style="
+            isWebpSupportedFlag
+              ? `background-image: url(${windowWebp});`
+              : `background-image: url(${windowJpg});`
+          "
+        ></div>
         <div class="people-about-wrapper__text">
           <h1>People</h1>
           <p class="people-about-wrapper__paragraph">
@@ -86,6 +94,9 @@ import { Carousel, Slide } from 'vue-carousel';
 import TeamMemberModal from '../../shared/TeamMemberModal';
 import RightArrow from '../../assets/images/svg/right.svg';
 import teamData from '../../assets/json/team.json';
+import isWebpSupported from '../../helper/WebpDetectionHelper';
+import windowWebp from '../../assets/images/window.webp';
+import windowJpg from '../../assets/images/window.jpg';
 
 const TeamMember = () => import('../../components/About/TeamMember');
 const Footer = () => import('../../shared/Footer');
@@ -99,7 +110,10 @@ export default {
       perPageSlides: 0,
       targetSlideId: 0,
       openModalFlag: false,
-      memberBio: ''
+      memberBio: '',
+      isWebpSupportedFlag: null,
+      windowWebp,
+      windowJpg
     };
   },
   methods: {
@@ -167,6 +181,9 @@ export default {
   },
   mounted() {
     this.getNumOfShownSlides();
+    (async () => {
+      this.isWebpSupportedFlag = await isWebpSupported();
+    })();
   },
   components: {
     Carousel,

@@ -1,5 +1,9 @@
 <template>
-  <div class="strategic-home-wrapper">
+  <div
+    class="strategic-home-wrapper"
+    v-if="isWebpSupportedFlag !== null"
+    :style="wrapperStyle"
+  >
     <Shape class="strategic-home-wrapper__shape" />
     <div class="strategic-home-wrapper__content">
       <div class="strategic-home-wrapper__titles">
@@ -28,9 +32,59 @@
 <script>
 const Footer = () => import('../../shared/Footer');
 const Shape = () => import('../../assets/images/shape.svg');
+import isWebpSupported from '../../helper/WebpDetectionHelper';
+import spotPicWebp from '../../assets/images/spot-pic.webp';
+import spotPicJpg from '../../assets/images/spot-pic.jpg';
+import spotPicMobWebp from '../../assets/images/spot-pic-mob.webp';
+import spotPicMobJpg from '../../assets/images/spot-pic-mob.jpg';
 
 export default {
-  components: { Footer, Shape }
+  data() {
+    return {
+      isWebpSupportedFlag: null,
+      isMobileView: false,
+      spotPicWebp,
+      spotPicJpg,
+      spotPicMobWebp,
+      spotPicMobJpg,
+      wrapperStyle: ''
+    };
+  },
+  components: { Footer, Shape },
+  methods: {
+    getProperBackground() {
+      if (this.isMobileView) {
+        if (this.isWebpSupportedFlag) {
+          this.wrapperStyle = `background-image: linear-gradient(to bottom left,rgba(255, 255, 255, 0.12),rgba(0, 0,0, 0.75)),url(${spotPicMobWebp});`;
+        } else {
+          this.wrapperStyle = `background-image: linear-gradient(to bottom left,rgba(255, 255, 255, 0.12),rgba(0, 0, 0, 0.75)),url(${spotPicMobJpg});`;
+        }
+      } else {
+        if (this.isWebpSupportedFlag) {
+          this.wrapperStyle = `background-image: url(${spotPicWebp});`;
+        } else {
+          this.wrapperStyle = `background-image: url(${spotPicJpg});`;
+        }
+      }
+    }
+  },
+  mounted() {
+    const phone = window.matchMedia('(max-width:575px)');
+    const tablet = window.matchMedia(
+      '(min-width:768px) and (max-width: 991px)'
+    );
+    const desktop = window.matchMedia(
+      '(min-width:992px) and (max-width: 1199px)'
+    );
+    if (phone.matches || tablet.matches || desktop.matches) {
+      this.isMobileView = true;
+    }
+
+    (async () => {
+      this.isWebpSupportedFlag = await isWebpSupported();
+      this.getProperBackground();
+    })();
+  }
 };
 </script>
 
