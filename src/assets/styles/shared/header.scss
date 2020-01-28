@@ -13,7 +13,7 @@ $item-time: 6s;
   display: flex;
   &__brand {
     align-self: flex-start;
-    width: 20%;
+    width: 18%;
     @include is-mobile {
       width: 50%;
     }
@@ -69,10 +69,10 @@ $item-time: 6s;
   }
 
   @include is-desktop {
-    top: 25%;
+    top: 8%;
   }
   @include is-large-desktop {
-    top: 12.5%;
+    top: 10%;
   }
   &__dropbtn {
     position: relative;
@@ -147,6 +147,19 @@ li.dropdown {
   display: block;
   text-align: left;
   font-size: 0.875rem;
+  .light-theme.header-wrapper__is-active {
+    color: $light-black !important;
+  }
+  .dark-theme.header-wrapper__is-active {
+    color: $light-cyan !important;
+  }
+}
+
+.dropdown-content .light-theme.header-wrapper__is-active {
+  color: $light-black !important;
+}
+.dropdown-content .dark-theme.header-wrapper__is-active {
+  color: $light-cyan !important;
 }
 
 .dropdown-content .light-theme:hover {
@@ -158,6 +171,13 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown .header-wrapper__dropbtn.light-theme.header-wrapper__is-active {
+  color: $light-black !important;
+}
+.dropdown .header-wrapper__dropbtn.dark-theme.header-wrapper__is-active {
+  color: $light-cyan !important;
 }
 
 .svg-logo {

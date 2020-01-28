@@ -32,21 +32,30 @@
           href="javascript:void(0)"
           :class="[
             'header-wrapper__dropbtn',
-            isLightTheme ? 'light-theme' : 'dark-theme'
+            isLightTheme ? 'light-theme' : 'dark-theme',
+            activeItem === 'people' || activeItem === 'business'
+              ? 'header-wrapper__is-active'
+              : ''
           ]"
           >about</a
         >
 
         <div :class="['dropdown-content']">
           <a
-            href="#people"
-            :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
+            href="#about-people"
+            :class="[
+              isLightTheme ? 'light-theme' : 'dark-theme',
+              activeItem === 'people' ? 'header-wrapper__is-active' : ''
+            ]"
           >
             people
           </a>
           <a
-            href="#business"
-            :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
+            href="#about-business"
+            :class="[
+              isLightTheme ? 'light-theme' : 'dark-theme',
+              activeItem === 'business' ? 'header-wrapper__is-active' : ''
+            ]"
           >
             business
           </a>

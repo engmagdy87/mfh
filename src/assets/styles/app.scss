@@ -10,6 +10,11 @@
   src: url('~@/assets/fonts/NeueMontreal-Regular.otf');
 }
 
+@font-face {
+  font-family: 'Neue Montreal Light';
+  src: url('~@/assets/fonts/NeueMontreal-Light.otf');
+}
+
 html {
   -webkit-overflow-scrolling: touch;
   height: 100%;

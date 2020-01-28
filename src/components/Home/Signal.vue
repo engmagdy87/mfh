@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/containers/signal-home.scss';
+@import '../../assets/styles/components/home/home-signal.scss';
 </style>

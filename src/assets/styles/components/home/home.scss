@@ -1,5 +1,5 @@
-@import '../color-palette.scss';
-@import '../mixins.scss';
+@import '../../color-palette.scss';
+@import '../../mixins.scss';
 
 .strategic-home-wrapper {
   position: relative;
@@ -49,8 +49,14 @@
 
 @include is-mobile {
   .strategic-home-wrapper {
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0.12),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url('~@/assets/images/spot-pic-mob.webp');
     background-size: cover;
-    background-position: top left;
+    background-position: top;
     &__shape {
       display: none;
     }
@@ -68,7 +74,7 @@
       width: 90%;
       .grid {
         overflow-y: auto;
-        height: 300px;
+        height: 45vh;
         padding-right: 5px;
       }
       &::-webkit-scrollbar {
@@ -90,7 +96,14 @@
 }
 @include is-tablet {
   .strategic-home-wrapper {
-    background-image: none;
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0.12),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url('~@/assets/images/spot-pic-mob.webp');
+    background-size: auto;
+    background-position: top;
     &__shape {
       display: none;
     }
@@ -98,7 +111,33 @@
       top: 30%;
     }
     &__content {
-      top: 42%;
+      top: 35%;
+      width: 60%;
+      .column {
+        text-align: justify;
+        color: $gray;
+      }
+    }
+  }
+}
+@include is-desktop {
+  .strategic-home-wrapper {
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0.12),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url('~@/assets/images/spot-pic-mob.webp');
+    background-size: auto;
+    background-position: top;
+    &__shape {
+      display: none;
+    }
+    &__titles {
+      top: 30%;
+    }
+    &__content {
+      top: 35%;
       width: 60%;
       .column {
         text-align: justify;

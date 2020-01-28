@@ -10,6 +10,12 @@ $background-time: 6s;
     position: absolute;
     bottom: 90px;
     left: 50px;
+    @include is-tablet {
+      bottom: 75px;
+    }
+    @include is-mobile {
+      bottom: -10px;
+    }
   }
 }
 

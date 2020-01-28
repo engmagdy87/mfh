@@ -1,0 +1,84 @@
+@import '../../color-palette.scss';
+@import '../../mixins.scss';
+
+.team-member-wrapper {
+  div {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__card {
+    vertical-align: top;
+    cursor: pointer;
+
+    &--expand {
+      width: 100%;
+    }
+    &--shrink {
+      width: 50%;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__name {
+      color: white;
+      font-size: 18px;
+      margin: 5px 20px;
+    }
+    &__title {
+      color: $gray;
+      font-size: 12px;
+      margin: 5px 20px;
+    }
+    &__rewards {
+      margin: 15px 0 10px 20px;
+      display: flex;
+      width: 100%;
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__details {
+    padding: 5px;
+    width: calc(46% - 10px);
+
+    &--show {
+      visibility: visible;
+    }
+    &--hide {
+      visibility: hidden;
+    }
+    &__closebtn {
+      display: block;
+      text-align: right;
+      width: 96%;
+      padding: 2% 1% 2% 0;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    &__bio {
+      line-height: 20px;
+      text-align: justify;
+      color: $dark-gray;
+    }
+  }
+}
+
+.expand-card {
+  @include is-mobile {
+    flex-basis: 100% !important;
+  }
+  @include is-tablet {
+    flex-basis: 62% !important;
+  }
+  @include is-desktop {
+    flex-basis: 40% !important;
+  }
+  @include is-large-desktop {
+    flex-basis: 34% !important;
+  }
+  @include is-very-large-desktop {
+    flex-basis: 27.6% !important;
+  }
+}

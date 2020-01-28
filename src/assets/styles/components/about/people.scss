@@ -1,0 +1,228 @@
+@import '../../color-palette.scss';
+@import '../../mixins.scss';
+
+.people-about-wrapper {
+  position: relative;
+  width: 100%;
+  height: 82%;
+  @include is-mobile {
+    height: 95%;
+  }
+  &__content {
+    width: 95vw;
+    height: 87%;
+    margin-top: 12%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+    @include is-mobile {
+      height: 100%;
+      width: 100%;
+    }
+    @include is-tablet {
+      height: 95%;
+    }
+    // @include is-desktop {
+    //   flex-basis: 38% !important;
+    // }
+    // @include is-large-desktop {
+    //   flex-basis: 34% !important;
+    // }
+    // @include is-very-large-desktop {
+    //   flex-basis: 27.6% !important;
+    // }
+  }
+  &__description {
+    display: flex;
+    // width: 85%;
+    // max-width: 85%;
+    min-width: 90%;
+    text-align: left;
+    transition: all 0.2s ease;
+    @include is-mobile {
+      min-width: 100%;
+    }
+    @include is-tablet {
+      min-width: 100%;
+    }
+    // @include is-desktop {
+    //   flex-basis: 38% !important;
+    // }
+    // @include is-large-desktop {
+    //   flex-basis: 34% !important;
+    // }
+    // @include is-very-large-desktop {
+    //   flex-basis: 27.6% !important;
+    // }
+    h1 {
+      color: $light-cyan;
+      font-size: 70px;
+      opacity: 0.85;
+      margin-top: 0;
+      font-weight: lighter;
+      @include is-mobile {
+        font-size: 50px;
+      }
+    }
+    &__reduced {
+      visibility: hidden;
+      transition: all 0.2s ease;
+      @include is-mobile {
+        width: 0;
+        min-width: 0;
+      }
+    }
+  }
+  &__team {
+    width: 100vw;
+    min-width: 100%;
+    // position: absolute;
+    // right: -45%;
+    // background-color: chocolate;
+    span {
+      font-size: 20px;
+      color: white;
+    }
+  }
+  &__text {
+    width: 50%;
+    position: relative;
+    @include is-mobile {
+      width: 100%;
+      padding-top: 50px;
+    }
+  }
+  &__paragraph {
+    color: white;
+    text-align: justify;
+    width: 60%;
+    line-height: 24px;
+    @include is-tablet {
+      width: 70%;
+    }
+    @include is-mobile {
+      width: 100%;
+    }
+  }
+
+  &__hero-img {
+    background-image: url('~@/assets/images/window.webp');
+    width: 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include is-tablet {
+      background-size: 95%;
+    }
+    @include is-mobile {
+      display: none;
+    }
+  }
+  &__section-footer {
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    display: flex;
+    @include is-tablet {
+      bottom: 100px;
+    }
+    @include is-mobile {
+      bottom: 60px;
+      left: 15%;
+    }
+    .num {
+      font-weight: bold;
+      font-size: 40px;
+      margin: 0 0 -15px 0;
+      color: $light-cyan;
+    }
+    .year {
+      font-family: 'Neue Montreal Light';
+      color: $light-cyan;
+      font-size: 40px;
+      margin: 0;
+    }
+    .finance-wrapper {
+      margin: 30px 0 0 20px;
+      vertical-align: text-bottom;
+      @include is-mobile {
+        margin: 10px 0 0 20px;
+      }
+    }
+    .knowledge {
+      font-size: 18px;
+      margin: 0;
+      color: $gray;
+    }
+    .finance {
+      font-size: 18px;
+      margin: 0;
+      color: $gray;
+    }
+  }
+  &__meet-our-people {
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    font-size: 12px;
+    color: $dark-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .strong-text {
+      color: white;
+      margin-right: 10px;
+    }
+    @include is-mobile {
+      bottom: 20px;
+      right: 0;
+      display: grid;
+    }
+  }
+}
+
+button:focus {
+  outline: 0 !important;
+}
+button.VueCarousel-dot.VueCarousel-dot--active {
+  background-color: white !important;
+}
+button.VueCarousel-dot {
+  background-color: transparent !important;
+  border: 1px solid $gray !important;
+  padding: 0 !important;
+  margin: 5px;
+}
+
+.slide {
+  color: $gray;
+  height: 50%;
+  border: 1px solid $gray;
+  margin-right: 2%;
+  @include is-mobile {
+    flex-basis: 70% !important;
+    margin: 0 15%;
+  }
+  @include is-tablet {
+    flex-basis: 31% !important;
+  }
+  @include is-desktop {
+    flex-basis: 20% !important;
+  }
+  @include is-large-desktop {
+    flex-basis: 17% !important;
+  }
+  @include is-very-large-desktop {
+    flex-basis: 13.8% !important;
+  }
+}
+
+.carousel {
+  margin-top: 20px;
+  @include is-tablet {
+    margin-top: 80px;
+  }
+}

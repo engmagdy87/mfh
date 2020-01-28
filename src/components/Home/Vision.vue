@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/containers/strategic-home.scss';
+@import '../../assets/styles/components/home/home.scss';
 </style>
