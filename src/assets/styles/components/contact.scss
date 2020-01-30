@@ -1,0 +1,125 @@
+@import '../color-palette.scss';
+@import '../mixins.scss';
+
+.contact-about-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 10%);
+  padding-top: 5%;
+  @include is-mobile {
+    padding-top: 20%;
+  }
+  display: flex;
+  &__column {
+    &--1 {
+      width: 20%;
+      @include is-mobile {
+        width: 0;
+      }
+    }
+    &--2 {
+      width: 50%;
+      margin-top: 7%;
+      @include is-mobile {
+        width: 100%;
+      }
+      &__title {
+        margin-bottom: 0;
+        @include is-mobile {
+          color: $light-cyan;
+        }
+      }
+      &__sector {
+        margin-top: 0;
+        margin-bottom: 10%;
+        @include is-mobile {
+          color: $light-cyan;
+          margin-left: 15%;
+          margin-bottom: 5%;
+          font-weight: bold;
+        }
+      }
+      h1 {
+        font-weight: lighter;
+        color: $dark-gray;
+        font-size: 70px;
+        // opacity: 0.85;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: lighter;
+        @include is-mobile {
+          font-size: 50px;
+          color: $light-cyan;
+          margin-bottom: 5px;
+        }
+      }
+      &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        @include is-mobile {
+          display: block;
+          height: 65%;
+          overflow-y: scroll;
+        }
+        div div {
+          margin-bottom: 10px;
+        }
+        &--item-head {
+          display: flex;
+          @include is-mobile {
+            color: $light-cyan;
+          }
+          span {
+            margin-left: 15%;
+            margin-top: 5%;
+            img {
+              width: 15px;
+              margin-left: 20px;
+            }
+          }
+          div:nth-child(1) {
+            width: 15%;
+            img {
+              width: 20px;
+            }
+          }
+          div:nth-child(2) {
+            width: 85%;
+            p {
+              margin-top: 0;
+              margin-bottom: 5px;
+              @include is-mobile {
+                color: $light-cyan;
+              }
+            }
+          }
+        }
+        &--item-europe {
+          margin-left: 80px;
+          margin-bottom: 20px !important;
+          @include is-mobile {
+            color: $light-cyan;
+            width: 85%;
+            margin-left: 15%;
+          }
+          p {
+            margin-top: 0;
+            margin-bottom: 5px;
+            @include is-mobile {
+              color: $light-cyan;
+            }
+          }
+          span {
+            // margin-left: 15%;
+            margin-top: 5%;
+            img {
+              width: 15px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

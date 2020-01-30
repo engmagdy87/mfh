@@ -49,11 +49,11 @@ export default {
     return {
       isWebpSupportedFlag: null,
       isMobileView: false,
+      wrapperStyle: '',
       spotPicWebp,
       spotPicJpg,
       spotPicMobWebp,
-      spotPicMobJpg,
-      wrapperStyle: ''
+      spotPicMobJpg
     };
   },
   methods: {

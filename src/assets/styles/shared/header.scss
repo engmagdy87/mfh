@@ -234,6 +234,7 @@ li.dropdown {
   width: 60%;
   height: 70%;
   background-image: radial-gradient(
+    circle farthest-side at center,
     rgba(152, 152, 152, 0.98),
     rgba(60, 60, 59, 0.98)
   );
@@ -268,6 +269,9 @@ li.dropdown {
   color: white;
   text-decoration: none;
 }
+.navigation-menu ul li a:hover {
+  color: rgba($color: white, $alpha: 0.7);
+}
 .navigation-menu.active {
   transform: translate(0, 0);
   z-index: 10;
@@ -284,6 +288,11 @@ li.dropdown {
   transition: all 0.2s ease-in 0s;
 }
 
+.navigation-menu li.active a,
+.navigation-menu li.active a:hover {
+  color: $light-cyan;
+}
+
 .closebtn {
   position: absolute;
   top: 20px;
@@ -291,4 +300,8 @@ li.dropdown {
   font-size: 30px;
   color: white;
   cursor: pointer;
+}
+
+.closebtn:hover {
+  color: rgba($color: white, $alpha: 0.7);
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "number": "I.",
+    "firstPart": "Asset",
+    "secondPart": "Management"
+  },
+  {
+    "number": "II.",
+    "firstPart": "Custody",
+    "secondPart": "Services"
+  },
+  {
+    "number": "III.",
+    "firstPart": "Securities",
+    "secondPart": "& Brokerage"
+  },
+  {
+    "number": "IV.",
+    "firstPart": "Investment Banking",
+    "secondPart": "& Advisory Services"
+  },
+  {
+    "number": "V.",
+    "firstPart": "Consumer",
+    "secondPart": "& Microfinance"
+  },
+  {
+    "number": "VI.",
+    "firstPart": "Leasing",
+    "secondPart": "& Factoring"
+  },
+  {
+    "number": "VII.",
+    "firstPart": "Trade",
+    "secondPart": "Finance"
+  },
+  {
+    "number": "VIII.",
+    "firstPart": "Securitisation",
+    "secondPart": ""
+  }
+]

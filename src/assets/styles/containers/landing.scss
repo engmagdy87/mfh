@@ -35,5 +35,11 @@
     &__darkest {
       background-color: black;
     }
+    &__light-section {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-blend-mode: darken;
+    }
   }
 }

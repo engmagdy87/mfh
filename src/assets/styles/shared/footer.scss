@@ -6,9 +6,11 @@ $background-time: 6s;
 .footer-wrapper {
   position: absolute;
   bottom: -30px;
+  width: 100%;
+  left: 0%;
   &__inner {
     position: absolute;
-    bottom: 90px;
+    bottom: 40px;
     left: 50px;
     @include is-tablet {
       bottom: 75px;
@@ -19,8 +21,8 @@ $background-time: 6s;
   }
 }
 
-span,
-strong {
+.footer-wrapper__part,
+.footer-wrapper__url {
   font-size: 10px;
   color: $light-black;
   letter-spacing: 1px;
@@ -55,4 +57,13 @@ strong {
 }
 @include is-large-desktop {
   top: 12.5%;
+}
+
+.dark-theme {
+  &__part,
+  &__url {
+    color: $dark-gray !important;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
 }

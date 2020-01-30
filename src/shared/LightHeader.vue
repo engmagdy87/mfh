@@ -3,11 +3,11 @@
     <div class="header-wrapper__brand">
       <a class="header-wrapper__item" href="#home">
         <MFHLogo
-          :class="[
-            'svg-logo',
-            isLogoAnimated ? 'svg-logo--animate-logo' : '',
-            isLightLogo ? 'svg-logo--light-logo' : ''
-          ]"
+          :class="
+            isMobileView
+              ? 'svg-logo svg-logo--light-logo'
+              : 'svg-logo svg-logo--dark-logo'
+          "
         />
       </a>
     </div>
@@ -18,7 +18,7 @@
           activeItem === 'home' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a href="#home" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
+        <a href="#home" class="light-theme">
           home
         </a>
       </li>
@@ -31,8 +31,7 @@
         <a
           href="javascript:void(0)"
           :class="[
-            'header-wrapper__dropbtn',
-            isLightTheme ? 'light-theme' : 'dark-theme',
+            'header-wrapper__dropbtn light-theme',
             activeItem === 'people' || activeItem === 'business'
               ? 'header-wrapper__is-active'
               : ''
@@ -44,7 +43,7 @@
           <a
             href="#about-people"
             :class="[
-              isLightTheme ? 'light-theme' : 'dark-theme',
+              'light-theme',
               activeItem === 'people' ? 'header-wrapper__is-active' : ''
             ]"
           >
@@ -53,7 +52,7 @@
           <a
             href="#about-business"
             :class="[
-              isLightTheme ? 'light-theme' : 'dark-theme',
+              'light-theme',
               activeItem === 'business' ? 'header-wrapper__is-active' : ''
             ]"
           >
@@ -67,11 +66,7 @@
           activeItem === 'services' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a
-          href="#services"
-          :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
-          >services</a
-        >
+        <a href="#services" class="light-theme">services</a>
       </li>
       <li
         :class="[
@@ -79,19 +74,9 @@
           activeItem === 'contact' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a
-          href="#contact"
-          :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
-        >
-          contact</a
-        >
+        <a href="#contact" class="light-theme"> contact</a>
       </li>
-      <li
-        :class="[
-          'header-wrapper__item',
-          isLightTheme ? 'light-theme' : 'dark-theme'
-        ]"
-      >
+      <li class="header-wrapper__item light-theme">
         <div @click="openNavMenu">
           <a href="javascript:void(0)">
             <span
@@ -114,7 +99,7 @@
                   : ''
               ]"
             >
-              <a @click="closeNavMenu" href="#about-people">ABOUT</a>
+              <a @click="closeNavMenu" href="#about">ABOUT</a>
             </li>
             <li :class="[activeItem === 'services' ? 'active' : '']">
               <a @click="closeNavMenu" href="#services">SERVICES</a>
@@ -133,10 +118,9 @@
 import MFHLogo from '../assets/images/logo-dark.svg';
 
 export default {
-  props: ['isLogoAnimated', 'isLightLogo', 'activeItem'],
+  props: ['activeItem', 'isMobileView'],
   data() {
     return {
-      isLightTheme: true,
       isNavMenuClicked: false
     };
   },
@@ -148,11 +132,6 @@ export default {
     closeNavMenu() {
       this.isNavMenuClicked = false;
     }
-  },
-  mounted() {
-    setTimeout(() => {
-      this.isLightTheme = false;
-    }, 6000);
   }
 };
 </script>
