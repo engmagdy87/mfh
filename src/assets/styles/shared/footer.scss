@@ -23,7 +23,7 @@ $background-time: 6s;
 
 .footer-wrapper__part,
 .footer-wrapper__url {
-  font-size: 10px;
+  font-size: 12px;
   color: $light-black;
   letter-spacing: 1px;
   animation-name: background-keyframes;
@@ -62,7 +62,7 @@ $background-time: 6s;
   &__part,
   &__url {
     color: $dark-gray !important;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 }

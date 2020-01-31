@@ -61,7 +61,7 @@ export default {
   color: $gray;
   &__text {
     &--active {
-      color: $secondary !important;
+      color: $dark-cyan !important;
     }
     @include is-mobile {
       font-size: 1.6rem !important;
