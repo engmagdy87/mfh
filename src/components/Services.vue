@@ -14,13 +14,18 @@
       </p>
       <p>
         Clients benefit from capitalising on the wide range of our services and
-        our disciplined, responsible approach in investing strategies.
+        our
+        <strong
+          >disciplined, responsible approach in investing strategies.</strong
+        >
       </p>
       <p>
         We work with clients from evaluation of opportunities, through
         processing using bespoke tailored solutions and up to attainment of a
-        favourable exit scenario. MFH as agroup manages every aspect of the
-        investment process.
+        favourable exit scenario.
+        <strong
+          >MFH as agroup manages every aspect of the investment process.</strong
+        >
       </p>
     </div>
     <div

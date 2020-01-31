@@ -8,13 +8,13 @@
         ]"
       >
         <div
-          class="people-about-wrapper__hero-img"
           v-if="isWebpSupportedFlag !== null"
-          :style="
+          :class="[
+            'people-about-wrapper__hero-img',
             isWebpSupportedFlag
-              ? `background-image: url(${windowWebp});`
-              : `background-image: url(${windowJpg});`
-          "
+              ? 'people-about-wrapper__hero-img--webp'
+              : 'people-about-wrapper__hero-img--jpg'
+          ]"
         ></div>
         <div class="people-about-wrapper__text">
           <h1>People</h1>
@@ -95,8 +95,6 @@ import TeamMemberModal from '../../shared/TeamMemberModal';
 import RightArrow from '../../assets/images/svg/right.svg';
 import teamData from '../../assets/json/team.json';
 import isWebpSupported from '../../helper/WebpDetectionHelper';
-import windowWebp from '../../assets/images/window.webp';
-import windowJpg from '../../assets/images/window.jpg';
 
 const TeamMember = () => import('../../components/About/TeamMember');
 const Footer = () => import('../../shared/Footer');
@@ -111,9 +109,7 @@ export default {
       targetSlideId: 0,
       openModalFlag: false,
       memberBio: '',
-      isWebpSupportedFlag: null,
-      windowWebp,
-      windowJpg
+      isWebpSupportedFlag: null
     };
   },
   methods: {

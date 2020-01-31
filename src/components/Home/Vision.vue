@@ -1,8 +1,7 @@
 <template>
   <div
-    class="strategic-home-wrapper"
     v-if="isWebpSupportedFlag !== null"
-    :style="wrapperStyle"
+    :class="['strategic-home-wrapper', getProperBackground()]"
   >
     <Shape class="strategic-home-wrapper__shape" />
     <div class="strategic-home-wrapper__content">
@@ -11,18 +10,10 @@
         <h1>Statement</h1>
       </div>
       <div class="grid">
-        <p class="column">
+        <div class="column">
           Our vision is to be the most admired investment partner in the MENA
           region.
-        </p>
-        <p class="column">
-          Our vision is to be the most admired investment partner in the MENA
-          region.
-        </p>
-        <p class="column">
-          Our vision is to be the most admired investment partner in the MENA
-          region.
-        </p>
+        </div>
       </div>
     </div>
     <Footer :innerPage="true" />
@@ -33,39 +24,20 @@
 const Footer = () => import('../../shared/Footer');
 const Shape = () => import('../../assets/images/shape.svg');
 import isWebpSupported from '../../helper/WebpDetectionHelper';
-import spotPicWebp from '../../assets/images/spot-pic.webp';
-import spotPicJpg from '../../assets/images/spot-pic.jpg';
-import spotPicMobWebp from '../../assets/images/spot-pic-mob.webp';
-import spotPicMobJpg from '../../assets/images/spot-pic-mob.jpg';
 
 export default {
   data() {
     return {
       isWebpSupportedFlag: null,
-      isMobileView: false,
-      spotPicWebp,
-      spotPicJpg,
-      spotPicMobWebp,
-      spotPicMobJpg,
-      wrapperStyle: ''
+      isMobileView: false
     };
   },
   components: { Footer, Shape },
   methods: {
     getProperBackground() {
-      if (this.isMobileView) {
-        if (this.isWebpSupportedFlag) {
-          this.wrapperStyle = `background-image: linear-gradient(to bottom left,rgba(255, 255, 255, 0.12),rgba(0, 0,0, 0.75)),url(${spotPicMobWebp});`;
-        } else {
-          this.wrapperStyle = `background-image: linear-gradient(to bottom left,rgba(255, 255, 255, 0.12),rgba(0, 0, 0, 0.75)),url(${spotPicMobJpg});`;
-        }
-      } else {
-        if (this.isWebpSupportedFlag) {
-          this.wrapperStyle = `background-image: url(${spotPicWebp});`;
-        } else {
-          this.wrapperStyle = `background-image: url(${spotPicJpg});`;
-        }
-      }
+      return `strategic-home-wrapper__background--${
+        this.isMobileView ? 'mob' : 'desk'
+      }-${this.isWebpSupportedFlag ? 'webp' : 'jpg'}`;
     }
   },
   mounted() {
@@ -82,7 +54,6 @@ export default {
 
     (async () => {
       this.isWebpSupportedFlag = await isWebpSupported();
-      this.getProperBackground();
     })();
   }
 };

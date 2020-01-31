@@ -40,7 +40,6 @@ $background-time: 6s;
 @include is-mobile {
   .footer-wrapper {
     bottom: -30px;
-    // left: 32%;
     &__inner {
       bottom: 20px;
       left: 5%;

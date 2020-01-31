@@ -25,20 +25,9 @@
     @include is-tablet {
       height: 95%;
     }
-    // @include is-desktop {
-    //   flex-basis: 38% !important;
-    // }
-    // @include is-large-desktop {
-    //   flex-basis: 34% !important;
-    // }
-    // @include is-very-large-desktop {
-    //   flex-basis: 27.6% !important;
-    // }
   }
   &__description {
     display: flex;
-    // width: 85%;
-    // max-width: 85%;
     min-width: 90%;
     text-align: left;
     transition: all 0.2s ease;
@@ -48,15 +37,6 @@
     @include is-tablet {
       min-width: 100%;
     }
-    // @include is-desktop {
-    //   flex-basis: 38% !important;
-    // }
-    // @include is-large-desktop {
-    //   flex-basis: 34% !important;
-    // }
-    // @include is-very-large-desktop {
-    //   flex-basis: 27.6% !important;
-    // }
     h1 {
       color: $light-cyan;
       font-size: 70px;
@@ -79,9 +59,6 @@
   &__team {
     width: 100vw;
     min-width: 100%;
-    // position: absolute;
-    // right: -45%;
-    // background-color: chocolate;
     span {
       font-size: 20px;
       color: white;
@@ -113,6 +90,12 @@
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
+    &--webp {
+      background-image: url('~@/assets/images/window.webp');
+    }
+    &--jpg {
+      background-image: url('~@/assets/images/window.jpg');
+    }
     @include is-tablet {
       background-size: 95%;
     }

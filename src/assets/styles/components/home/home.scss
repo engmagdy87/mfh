@@ -9,6 +9,30 @@
   width: 100%;
   height: 100%;
   margin: auto;
+  &__background {
+    &--mob-webp {
+      background-image: linear-gradient(
+          to bottom left,
+          rgba(255, 255, 255, 0.12),
+          rgba(0, 0, 0, 0.75)
+        ),
+        url('~@/assets/images/spot-pic-mob.webp');
+    }
+    &--mob-jpg {
+      background-image: linear-gradient(
+          to bottom left,
+          rgba(255, 255, 255, 0.12),
+          rgba(0, 0, 0, 0.75)
+        ),
+        url('~@/assets/images/spot-pic-mob.jpg');
+    }
+    &--desk-webp {
+      background-image: url('~@/assets/images/spot-pic.webp');
+    }
+    &--desk-jpg {
+      background-image: url('~@/assets/images/spot-pic.jpg');
+    }
+  }
   &__shape {
     position: absolute;
     top: 38%;
@@ -29,7 +53,7 @@
       letter-spacing: 3px;
       font-weight: lighter;
       color: $light-cyan;
-      margin-left: 45px;
+      margin-left: 20px;
       margin-bottom: 3px;
       opacity: 0.85;
     }
@@ -38,7 +62,7 @@
     position: absolute;
     top: 40%;
     left: 24.5%;
-    width: 60%;
+    width: 65%;
     .column {
       text-align: justify;
       color: $gray;

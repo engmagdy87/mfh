@@ -41,5 +41,74 @@
       background-position: center center;
       background-blend-mode: darken;
     }
+    &__business {
+      &--mob-webp {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/nile-city-mob.webp');
+      }
+      &--mob-jpg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/nile-city-mob.jpg');
+      }
+      &--desk-webp {
+        background-image: url('~@/assets/images/nile-city.webp');
+        background-color: $light-cyan;
+      }
+      &--desk-jpg {
+        background-image: url('~@/assets/images/nile-city.jpg');
+      }
+    }
+    &__services {
+      &--mob-webp {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/olivier-mob.webp');
+      }
+      &--mob-jpg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/olivier-mob.jpg');
+      }
+      &--desk-webp {
+        background-image: url('~@/assets/images/olivier-web.webp');
+        background-color: $light-cyan;
+      }
+      &--desk-jpg {
+        background-image: url('~@/assets/images/olivier-web.jpg');
+      }
+    }
+    &__contact {
+      &--mob-webp {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/contact-mob.webp');
+      }
+      &--mob-jpg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url('~@/assets/images/contact-mob.jpg');
+      }
+      &--desk-webp {
+        background-image: url('~@/assets/images/contact.webp');
+        background-color: $light-cyan;
+      }
+      &--desk-jpg {
+        background-image: url('~@/assets/images/contact.jpg');
+      }
+    }
   }
 }

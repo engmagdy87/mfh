@@ -10,6 +10,7 @@
       @click="onCardClicked"
     >
       <img
+        v-if="isWebpSupportedFlag !== null"
         :src="
           require(`@/assets/images/team/${
             isWebpSupportedFlag ? member.imageWebp : member.imageJpg

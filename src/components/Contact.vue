@@ -6,11 +6,20 @@
         Medaf Finance Holding
       </p>
       <h1>Get in Touch</h1>
-      <p class="contact-about-wrapper__column--2__sector">Head Office</p>
+      <p class="contact-about-wrapper__column--2__sector" v-if="!isMobileView">
+        Head Office
+      </p>
       <div class="contact-about-wrapper__column--2__grid">
         <div>
+          <p
+            class="contact-about-wrapper__column--2__sector"
+            v-if="isMobileView"
+            style="margin-left: 19%;"
+          >
+            Head Office
+          </p>
           <div class="contact-about-wrapper__column--2__grid--item-head">
-            <div><img src="../assets/images/icons/phone.png" /></div>
+            <div><PhoneIcon /></div>
             <div>
               <p>(+2) 02-24619581</p>
               <p>(+2) 02-24619582</p>
@@ -18,13 +27,13 @@
             </div>
           </div>
           <div class="contact-about-wrapper__column--2__grid--item-head">
-            <div><img src="../assets/images/icons/mail.png" /></div>
+            <div><EnvelopIcon /></div>
             <div>
               <p>info@medafinvestment.com</p>
             </div>
           </div>
           <div class="contact-about-wrapper__column--2__grid--item-head">
-            <div><img src="../assets/images/icons/pin.png" /></div>
+            <div><PinIcon /></div>
             <div>
               <p><strong>Cairo</strong></p>
               <p>27<sup>th</sup> Floor, North Tower 2005 C</p>
@@ -36,9 +45,7 @@
             class="contact-about-wrapper__column--2__grid--item-head"
             v-if="!isMobileView"
           >
-            <span>
-              GET DIRECTIONS<img src="../assets/images/icons/arrow.png" />
-            </span>
+            <span> GET DIRECTIONS </span><ArrowIcon />
           </div>
         </div>
         <div>
@@ -64,9 +71,7 @@
             class="contact-about-wrapper__column--2__grid--item-europe"
             v-if="isMobileView"
           >
-            <span>
-              GET DIRECTIONS<img src="../assets/images/icons/arrow.png" />
-            </span>
+            <span> GET DIRECTIONS<ArrowIcon /> </span>
           </div>
         </div>
       </div>
@@ -77,6 +82,10 @@
 
 <script>
 const Footer = () => import('../shared/Footer');
+import EnvelopIcon from '../assets/images/svg/mail.svg';
+import ArrowIcon from '../assets/images/svg/arrow.svg';
+import PhoneIcon from '../assets/images/svg/phone.svg';
+import PinIcon from '../assets/images/svg/pin.svg';
 
 export default {
   data() {
@@ -84,7 +93,7 @@ export default {
       isMobileView: false
     };
   },
-  components: { Footer },
+  components: { Footer, EnvelopIcon, ArrowIcon, PhoneIcon, PinIcon },
   mounted() {
     const phone = window.matchMedia('(max-width:575px)');
     if (phone.matches) {
