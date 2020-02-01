@@ -22,6 +22,7 @@
     height: $wrapper-height-desktop;
     padding: $wrapper-padding-desktop;
     scroll-snap-align: start;
+    // Force scroll to next view not prevent fast scroll so flicking occur
     scroll-snap-stop: always;
     position: relative;
     box-sizing: border-box;
