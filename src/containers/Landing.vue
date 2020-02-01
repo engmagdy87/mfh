@@ -23,7 +23,7 @@
       class="landing-wrapper__section landing-wrapper__section__darkest"
     >
       <Header :isLightLogo="true" activeItem="people" />
-      <AboutPeople />
+      <AboutPeople :isMobileView="isMobileView" />
     </div>
     <div
       id="about-business"

@@ -22,6 +22,7 @@
     height: $wrapper-height-desktop;
     padding: $wrapper-padding-desktop;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     position: relative;
     box-sizing: border-box;
     @include is-mobile {

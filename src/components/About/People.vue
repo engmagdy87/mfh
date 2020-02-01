@@ -36,6 +36,15 @@
               <p class="finance">in Finance</p>
             </div>
           </div>
+          <a href="#our-people" @click="reducePeopleWidth" v-if="isMobileView">
+            <div
+              class="people-about-wrapper__meet-our-people"
+              :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
+            >
+              <span>MEET</span><span class="strong-text">OUR PEOPLE</span
+              ><RightArrow />
+            </div>
+          </a>
         </div>
       </div>
       <div class="people-about-wrapper__team">
@@ -72,7 +81,7 @@
       :innerPage="true"
       :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
     />
-    <a href="#our-people" @click="reducePeopleWidth">
+    <a href="#our-people" @click="reducePeopleWidth" v-if="!isMobileView">
       <div
         class="people-about-wrapper__meet-our-people"
         :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
@@ -100,6 +109,7 @@ const TeamMember = () => import('../../components/About/TeamMember');
 const Footer = () => import('../../shared/Footer');
 
 export default {
+  props: ['isMobileView'],
   data() {
     return {
       teamData,

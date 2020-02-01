@@ -1,7 +1,9 @@
 <template>
   <div class="app-wrapper">
-    <SplashScreen v-if="isSpinnerVisible" />
-    <router-view v-else />
+    <transition name="fade" mode="out-in">
+      <SplashScreen key="1" v-if="isSpinnerVisible" />
+      <router-view key="2" v-else />
+    </transition>
   </div>
 </template>
 

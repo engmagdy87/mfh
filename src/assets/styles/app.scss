@@ -49,3 +49,12 @@ p,
 a {
   font-family: 'Neue Montreal Regular';
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

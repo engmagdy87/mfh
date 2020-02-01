@@ -6,14 +6,12 @@
     <Shape class="strategic-home-wrapper__shape" />
     <div class="strategic-home-wrapper__content">
       <div class="strategic-home-wrapper__titles">
-        <h2>VISION</h2>
+        <h3>VISION</h3>
         <h1>Statement</h1>
       </div>
-      <div class="grid">
-        <div class="column">
-          Our vision is to be the most admired investment partner in the MENA
-          region.
-        </div>
+      <div class="vision-content">
+        Our vision is to be the most admired investment partner in the MENA
+        region.
       </div>
     </div>
     <Footer :innerPage="true" />
