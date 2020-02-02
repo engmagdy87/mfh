@@ -22,6 +22,12 @@
       @include is-mobile {
         width: 100%;
       }
+      @include is-tablet {
+        width: 50%;
+      }
+      @include is-desktop {
+        width: 40%;
+      }
       h1 {
         font-weight: lighter;
         color: $dark-gray;
@@ -29,11 +35,29 @@
         font-weight: lighter;
         @include is-mobile {
           font-size: 50px;
-          color: $light-cyan;
           margin-bottom: 5px;
+          color: $light-cyan;
+        }
+        @include is-desktop {
+          font-size: 50px;
+          margin-bottom: 0;
         }
       }
-      p {
+      div {
+        @include is-desktop {
+          height: 60%;
+          overflow-y: scroll;
+          padding: 0 10px;
+          &::-webkit-scrollbar {
+            width: 3px !important;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $gray;
+            border-radius: 4.5px !important;
+          }
+        }
+      }
+      div p {
         text-align: justify;
         font-size: 18px;
         color: $dark-gray;

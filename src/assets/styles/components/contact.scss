@@ -23,6 +23,10 @@
       @include is-mobile {
         width: 100%;
       }
+      @include is-desktop {
+        width: 70%;
+        margin-top: 2%;
+      }
       &__title {
         margin-bottom: 0;
         @include is-mobile {
@@ -38,6 +42,9 @@
           margin-bottom: 5%;
           font-weight: bold;
         }
+        @include is-desktop {
+          margin-bottom: 1%;
+        }
       }
       h1 {
         font-weight: lighter;
@@ -51,6 +58,9 @@
           color: $light-cyan;
           margin-bottom: 5px;
         }
+        @include is-desktop {
+          font-size: 40px;
+        }
       }
       &__grid {
         display: grid;
@@ -62,6 +72,17 @@
           overflow-y: scroll;
           overflow-x: hidden;
         }
+        @include is-desktop {
+          height: 60%;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            width: 3px !important;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $gray;
+            border-radius: 4.5px !important;
+          }
+        }
         div div {
           margin-bottom: 10px;
         }
@@ -72,7 +93,7 @@
             color: $light-cyan;
           }
           span {
-            margin-left: 20%;
+            margin-left: 18%;
             margin-top: 5%;
           }
           svg {

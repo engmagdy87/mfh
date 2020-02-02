@@ -41,12 +41,17 @@
               <p>Ramlet Beaulac</p>
             </div>
           </div>
-          <div
-            class="contact-about-wrapper__column--2__grid--item-head"
-            v-if="!isMobileView"
+          <a
+            href="https://www.google.com/maps?ll=30.071548,31.227826&z=16&t=m&hl=en&gl=EG&mapclient=embed&cid=8346407453835388533"
+            target="__blank"
           >
-            <span> GET DIRECTIONS </span><ArrowIcon />
-          </div>
+            <div
+              class="contact-about-wrapper__column--2__grid--item-head"
+              v-if="!isMobileView"
+            >
+              <span> GET DIRECTIONS </span><ArrowIcon />
+            </div>
+          </a>
         </div>
         <div>
           <div class="contact-about-wrapper__column--2__grid--item-europe">
@@ -67,16 +72,21 @@
               <p><strong>Kuwait City</strong></p>
             </div>
           </div>
-          <div
-            class="contact-about-wrapper__column--2__grid--item-europe"
-            v-if="isMobileView"
+          <a
+            href="https://www.google.com/maps?ll=30.071548,31.227826&z=16&t=m&hl=en&gl=EG&mapclient=embed&cid=8346407453835388533"
+            target="__blank"
           >
-            <span> GET DIRECTIONS<ArrowIcon /> </span>
-          </div>
+            <div
+              class="contact-about-wrapper__column--2__grid--item-europe"
+              v-if="isMobileView"
+            >
+              <span> GET DIRECTIONS<ArrowIcon /> </span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <Footer :innerPage="true" :isDarkTheme="!isMobileView" />
+    <Footer :innerPage="true" :isDarkTheme="isDarkTheme" />
   </div>
 </template>
 
@@ -96,8 +106,16 @@ export default {
   components: { Footer, EnvelopIcon, ArrowIcon, PhoneIcon, PinIcon },
   mounted() {
     const phone = window.matchMedia('(max-width:575px)');
-    if (phone.matches) {
+    const desktop = window.matchMedia(
+      '(min-width:992px) and (max-width: 1199px)'
+    );
+    if (phone.matches || desktop.matches) {
       this.isMobileView = true;
+    }
+  },
+  methods: {
+    isDarkTheme() {
+      return !window.matchMedia('(max-width:575px)').matches;
     }
   }
 };

@@ -104,10 +104,7 @@ export default {
     const tablet = window.matchMedia(
       '(min-width:768px) and (max-width: 991px)'
     );
-    const desktop = window.matchMedia(
-      '(min-width:992px) and (max-width: 1199px)'
-    );
-    if (phone.matches || tablet.matches || desktop.matches) {
+    if (phone.matches || tablet.matches) {
       this.isMobileView = true;
     }
 

@@ -12,6 +12,9 @@ $background-time: 6s;
     position: absolute;
     bottom: 40px;
     left: 50px;
+    @include is-desktop {
+      bottom: 10px;
+    }
     @include is-tablet {
       bottom: 75px;
     }
