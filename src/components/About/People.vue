@@ -48,9 +48,7 @@
         </div>
       </div>
       <div class="people-about-wrapper__team">
-        <span :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
-          >The Board</span
-        >
+        <span :style="isOurPeopleClicked ? 'display:none' : ''">The Board</span>
         <carousel
           v-if="perPageSlides !== 0"
           :per-page="perPageSlides"
