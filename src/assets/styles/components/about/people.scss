@@ -115,6 +115,9 @@
         font-size: 12px !important;
         bottom: -50px;
       }
+      @include is-mobile {
+        bottom: 10px;
+      }
     }
   }
   &__text {
@@ -316,8 +319,8 @@ button.VueCarousel-dot {
   border: 1px solid $gray;
   margin-right: 2%;
   @include is-mobile {
-    flex-basis: 70% !important;
-    margin: 5% 15%;
+    flex-basis: 60% !important;
+    margin: 5% 20% 0 20%;
   }
   @media (min-width: 768px) and (max-width: 991px) and (min-height: 400px) and (max-height: 700px) {
     flex-basis: 50% !important;
