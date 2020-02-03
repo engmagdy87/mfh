@@ -38,7 +38,7 @@
     top: 38%;
     left: 12%;
     @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-      top: 22%;
+      top: 10%;
     }
   }
   &__titles {
@@ -50,6 +50,9 @@
       opacity: 0.85;
       margin-top: 0;
       font-weight: lighter;
+      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+        margin-bottom: 10px;
+      }
     }
     h2 {
       font-size: 18px;
@@ -76,11 +79,14 @@
     left: 24.5%;
     width: 65%;
     @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-      top: 25%;
+      top: 15%;
     }
     .column {
       text-align: justify;
       color: $gray;
+      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+        line-height: 18px;
+      }
     }
     .vision-content {
       text-align: justify;

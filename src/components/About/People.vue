@@ -4,7 +4,9 @@
       <div
         :class="[
           'people-about-wrapper__description',
-          isOurPeopleClicked ? 'people-about-wrapper__description__reduced' : ''
+          isOurPeopleClicked
+            ? 'people-about-wrapper__description__reduced'
+            : 'people-about-wrapper__description__expand'
         ]"
       >
         <div
@@ -39,7 +41,9 @@
           <a href="#our-people" @click="reducePeopleWidth" v-if="isMobileView">
             <div
               class="people-about-wrapper__meet-our-people"
-              :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
+              :style="
+                isOurPeopleClicked ? 'visibility:hidden' : 'visibility:visible'
+              "
             >
               <span>MEET</span><span class="strong-text">OUR PEOPLE</span
               ><RightArrow />
@@ -48,7 +52,11 @@
         </div>
       </div>
       <div class="people-about-wrapper__team">
-        <span :style="isOurPeopleClicked ? 'display:none' : ''">The Board</span>
+        <span
+          class="people-about-wrapper__team__board"
+          :style="isOurPeopleClicked ? 'display:none' : 'display:block'"
+          >The Board</span
+        >
         <carousel
           v-if="perPageSlides !== 0"
           :per-page="perPageSlides"
@@ -74,15 +82,25 @@
           </slide>
         </carousel>
       </div>
+      <a href="#about-people" @click="expandPeopleWidth">
+        <div
+          class="people-about-wrapper__team__return-people"
+          :style="
+            !isOurPeopleClicked ? 'visibility:hidden' : 'visibility:visible'
+          "
+        >
+          <RightArrow /><span class="strong-text">RETURN</span>
+        </div>
+      </a>
     </div>
     <Footer
       :innerPage="true"
-      :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
+      :style="isOurPeopleClicked ? 'visibility:hidden' : 'visibility:visible'"
     />
     <a href="#our-people" @click="reducePeopleWidth" v-if="!isMobileView">
       <div
         class="people-about-wrapper__meet-our-people"
-        :style="isOurPeopleClicked ? 'visibility:hidden' : ''"
+        :style="isOurPeopleClicked ? 'visibility:hidden' : 'visibility:visible'"
       >
         <span>MEET</span><span class="strong-text">OUR PEOPLE</span
         ><RightArrow />
@@ -136,6 +154,9 @@ export default {
     },
     reducePeopleWidth() {
       this.isOurPeopleClicked = true;
+    },
+    expandPeopleWidth() {
+      this.isOurPeopleClicked = false;
     },
     getNumOfShownSlides() {
       const phone = window.matchMedia('(max-width:575px)');
