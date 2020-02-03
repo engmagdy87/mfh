@@ -109,7 +109,10 @@ export default {
     const desktop = window.matchMedia(
       '(min-width:992px) and (max-width: 1199px)'
     );
-    if (phone.matches || desktop.matches) {
+    const landscapDesktop = window.matchMedia(
+      '(min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px)'
+    );
+    if (phone.matches || desktop.matches || landscapDesktop.matches) {
       this.isMobileView = true;
     }
   },

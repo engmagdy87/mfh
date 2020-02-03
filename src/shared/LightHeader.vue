@@ -99,7 +99,7 @@
                   : ''
               ]"
             >
-              <a @click="closeNavMenu" href="#about">ABOUT</a>
+              <a @click="closeNavMenu" href="#about-people">ABOUT</a>
             </li>
             <li :class="[activeItem === 'services' ? 'active' : '']">
               <a @click="closeNavMenu" href="#services">SERVICES</a>
