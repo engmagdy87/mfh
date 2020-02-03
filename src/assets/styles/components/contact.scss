@@ -137,6 +137,9 @@
           span {
             margin-top: 5%;
             color: $dark-gray;
+            @include is-mobile {
+              color: $light-cyan;
+            }
             svg {
               margin-left: 20px;
               fill: $dark-gray;

@@ -271,7 +271,7 @@ button.VueCarousel-dot {
   margin-right: 2%;
   @include is-mobile {
     flex-basis: 70% !important;
-    margin: 0 15%;
+    margin: 5% 15%;
   }
   @media (min-width: 768px) and (max-width: 991px) and (min-height: 400px) and (max-height: 700px) {
     flex-basis: 50% !important;
