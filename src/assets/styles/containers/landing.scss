@@ -3,7 +3,7 @@
 @import '../mixins.scss';
 
 .landing-wrapper {
-  overflow-y: visible;
+  overflow-y: scroll;
   overflow-x: hidden;
   height: $wrapper-height-desktop;
   @include is-mobile {
@@ -12,8 +12,6 @@
   }
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  -webkit-scroll-snap-type: y mandatory;
-  -webkit-scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
@@ -24,10 +22,8 @@
     height: $wrapper-height-desktop;
     padding: $wrapper-padding-desktop;
     scroll-snap-align: start;
-    -webkit-scroll-snap-align: start;
     // Force scroll to next view not prevent fast scroll so flicking occur
     scroll-snap-stop: always;
-    -webkit-scroll-snap-stop: always;
     position: relative;
     box-sizing: border-box;
     @include is-mobile {

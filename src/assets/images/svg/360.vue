@@ -522,6 +522,12 @@ const largeDesktop = window.matchMedia('(min-width:1200px)');
 	},
 	mounted(){
 		this.detectScreenWidthChange();
+		const more = document.getElementsByClassName('explore-more');
+		more[0].addEventListener('click',(e)=>{
+			e.preventDefault();
+			document.querySelector('#vision').scrollIntoView();
+			
+		});
 	}
 };
 </script>
