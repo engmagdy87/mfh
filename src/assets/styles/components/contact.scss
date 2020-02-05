@@ -20,7 +20,7 @@
     &--2 {
       width: 50%;
       margin-top: 7%;
-      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
         margin-top: 2%;
       }
       @include is-mobile {
@@ -48,7 +48,7 @@
         @include is-desktop {
           margin-bottom: 1%;
         }
-        @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+        @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
           margin-bottom: 2%;
         }
       }
@@ -89,7 +89,7 @@
             border-radius: 4.5px !important;
           }
         }
-        @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+        @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
           height: 70%;
           overflow-y: scroll;
           &::-webkit-scrollbar {
@@ -139,6 +139,9 @@
         &--item-europe {
           margin-left: 80px;
           margin-bottom: 20px !important;
+          @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+            margin-left: 60px;
+          }
           @include is-mobile {
             color: $light-cyan;
             width: 85%;

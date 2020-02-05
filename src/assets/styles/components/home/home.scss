@@ -27,18 +27,35 @@
         url('~@/assets/images/spot-pic-mob.jpg');
     }
     &--desk-webp {
-      background-image: url('~@/assets/images/spot-pic.webp');
+      background-image: linear-gradient(
+          to bottom left,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.8)
+        ),
+        url('~@/assets/images/spot-pic.webp');
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+        background-position: bottom;
+      }
     }
     &--desk-jpg {
-      background-image: url('~@/assets/images/spot-pic.jpg');
+      background-image: linear-gradient(
+          to bottom left,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.8)
+        ),
+        url('~@/assets/images/spot-pic.jpg');
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+        background-position: bottom;
+      }
     }
   }
   &__shape {
     position: absolute;
-    top: 38%;
-    left: 12%;
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-      top: 10%;
+    top: 35%;
+    left: 16%;
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+      top: 15%;
+      left: 13%;
     }
   }
   &__titles {
@@ -46,25 +63,25 @@
     text-align: left;
     h1 {
       color: $light-cyan;
-      font-size: 70px;
+      font-size: 60px;
       opacity: 0.85;
       margin-top: 0;
       font-weight: lighter;
-      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-        margin-bottom: 10px;
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+        margin-bottom: 0.6em;
       }
     }
     h2 {
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 3px;
       font-weight: lighter;
       color: $light-cyan;
       margin-left: 20px;
-      margin-bottom: 3px;
+      margin-bottom: 10px;
       opacity: 0.85;
     }
     h3 {
-      font-size: 40px;
+      font-size: 35px;
       letter-spacing: 3px;
       font-weight: lighter;
       color: $light-cyan;
@@ -75,23 +92,39 @@
   }
   &__content {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 24.5%;
     width: 65%;
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-      top: 15%;
+    height: 65vh;
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+      top: 20%;
     }
-    .column {
-      text-align: justify;
-      color: $gray;
-      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-        line-height: 18px;
-      }
-    }
+
     .vision-content {
       text-align: justify;
       color: $gray;
       font-size: 22px;
+      font-weight: bold;
+      &::before,
+      &::after {
+        content: '\201D';
+      }
+    }
+  }
+  &__paragraph {
+    column-count: 3;
+    height: 70%;
+    @include is-mobile {
+      column-count: unset;
+      height: 60%;
+      overflow-y: scroll;
+    }
+    p {
+      margin-top: 0;
+      color: $gray;
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+        font-size: 0.9em;
+      }
     }
   }
 }
@@ -141,6 +174,11 @@
       .vision-content {
         width: 100%;
         margin: 0;
+        font-weight: bold;
+        &::before,
+        &::after {
+          content: '\201D';
+        }
       }
     }
   }

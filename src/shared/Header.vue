@@ -1,7 +1,7 @@
 <template>
   <nav class="header-wrapper" role="navigation" aria-label="main navigation">
     <div class="header-wrapper__brand">
-      <a class="header-wrapper__item" href="#home">
+      <a class="header-wrapper__item" href="#home" @click="closeNavMenu">
         <MFHLogo
           :class="[
             'svg-logo',
@@ -18,7 +18,11 @@
           activeItem === 'home' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a href="#home" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
+        <a
+          href="#home"
+          @click="closeNavMenu"
+          :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
+        >
           home
         </a>
       </li>
@@ -30,6 +34,7 @@
       >
         <a
           href="javascript:void(0)"
+          @click="closeNavMenu"
           :class="[
             'header-wrapper__dropbtn',
             isLightTheme ? 'light-theme' : 'dark-theme',
@@ -47,11 +52,13 @@
               isLightTheme ? 'light-theme' : 'dark-theme',
               activeItem === 'people' ? 'header-wrapper__is-active' : ''
             ]"
+            @click="closeNavMenu('people')"
           >
             people
           </a>
           <a
             href="#about-business"
+            @click="closeNavMenu"
             :class="[
               isLightTheme ? 'light-theme' : 'dark-theme',
               activeItem === 'business' ? 'header-wrapper__is-active' : ''
@@ -69,6 +76,7 @@
       >
         <a
           href="#services"
+          @click="closeNavMenu"
           :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
           >services</a
         >
@@ -81,6 +89,7 @@
       >
         <a
           href="#contact"
+          @click="closeNavMenu"
           :class="[isLightTheme ? 'light-theme' : 'dark-theme']"
         >
           contact</a
@@ -114,7 +123,7 @@
                   : ''
               ]"
             >
-              <a @click="closeNavMenu" href="#about-people">ABOUT</a>
+              <a @click="closeNavMenu('people')" href="#about-people">ABOUT</a>
             </li>
             <li :class="[activeItem === 'services' ? 'active' : '']">
               <a @click="closeNavMenu" href="#services">SERVICES</a>
@@ -133,7 +142,7 @@
 import MFHLogo from '../assets/images/logo-dark.svg';
 
 export default {
-  props: ['isLogoAnimated', 'isLightLogo', 'activeItem'],
+  props: ['isLogoAnimated', 'isLightLogo', 'activeItem', 'closeOurTeam'],
   data() {
     return {
       isLightTheme: true,
@@ -145,8 +154,11 @@ export default {
     openNavMenu() {
       this.isNavMenuClicked = true;
     },
-    closeNavMenu() {
+    closeNavMenu(item) {
       this.isNavMenuClicked = false;
+      if (item !== 'people') {
+        this.closeOurTeam();
+      }
     }
   },
   mounted() {

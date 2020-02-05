@@ -7,7 +7,6 @@
           ? 'team-member-wrapper__card--shrink'
           : 'team-member-wrapper__card--expand'
       ]"
-      @click="onCardClicked"
     >
       <img
         v-if="isWebpSupportedFlag !== null"
@@ -24,10 +23,11 @@
       <p class="team-member-wrapper__card__title">
         {{ member.title }}
       </p>
-      <div class="team-member-wrapper__card__rewards">
-        <Antivirus />
+      <div class="team-member-wrapper__card__rewards" @click="onCardClicked">
+        Read More
+        <!-- <Antivirus />
         <StarMedal />
-        <Trophy />
+        <Trophy /> -->
       </div>
     </div>
     <div
@@ -51,9 +51,9 @@
 
 <script>
 import isWebpSupported from '../../helper/WebpDetectionHelper';
-import Antivirus from '../../assets/images/svg/antivirus.svg';
-import StarMedal from '../../assets/images/svg/star-medal.svg';
-import Trophy from '../../assets/images/svg/trophy.svg';
+// import Antivirus from '../../assets/images/svg/antivirus.svg';
+// import StarMedal from '../../assets/images/svg/star-medal.svg';
+// import Trophy from '../../assets/images/svg/trophy.svg';
 
 export default {
   props: [
@@ -101,9 +101,9 @@ export default {
     }
   },
   components: {
-    Antivirus,
-    StarMedal,
-    Trophy
+    // Antivirus,
+    // StarMedal,
+    // Trophy
   },
   mounted() {
     (async () => {

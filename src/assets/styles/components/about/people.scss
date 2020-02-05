@@ -24,8 +24,8 @@
     @include is-desktop {
       margin-top: 10%;
     }
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
-      margin-top: 5%;
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+      margin-top: 8%;
     }
   }
   &__description {
@@ -53,7 +53,7 @@
       @media (min-width: 768px) and (max-width: 991px) and (min-height: 400px) and (max-height: 700px) {
         margin-bottom: 15px;
       }
-      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
         margin-bottom: 10px;
       }
     }
@@ -77,6 +77,7 @@
       min-width: 90% !important;
       @include is-mobile {
         width: 100%;
+        min-width: 100% !important;
       }
       @media (min-width: 768px) and (max-width: 991px) and (min-height: 400px) and (max-height: 700px) {
         width: 100% !important;
@@ -111,9 +112,9 @@
         transform: scaleX(-1);
         margin-right: 10px;
       }
-      @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+      @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
         font-size: 12px !important;
-        bottom: -50px;
+        bottom: 0px;
       }
       @include is-mobile {
         bottom: 10px;
@@ -200,7 +201,7 @@
     @media (min-width: 768px) and (max-width: 991px) and (min-height: 701px) {
       display: none;
     }
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
       background-size: 45%;
       background-position: top;
     }
@@ -228,7 +229,7 @@
     @media (min-height: 767px) {
       bottom: 30%;
     }
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
       bottom: 20%;
     }
     .num {
@@ -293,7 +294,7 @@
     @media (min-width: 768px) and (max-width: 991px) and (min-height: 701px) {
       bottom: 0;
     }
-    @media (min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px) {
+    @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
       bottom: 5%;
       left: 70%;
     }
@@ -328,13 +329,16 @@ button.VueCarousel-dot {
   @media (min-width: 768px) and (max-width: 991px) and (min-height: 701px) {
     flex-basis: 25% !important;
   }
+  @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
+    flex-basis: 14% !important;
+  }
 
-  @include is-desktop {
-    flex-basis: 15% !important;
-  }
-  @include is-large-desktop {
-    flex-basis: 15% !important;
-  }
+  // @include is-desktop {
+  //   flex-basis: 15% !important;
+  // }
+  // @include is-large-desktop {
+  //   flex-basis: 15% !important;
+  // }
   @include is-very-large-desktop {
     flex-basis: 12.3% !important;
   }

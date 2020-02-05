@@ -6,7 +6,7 @@
     <Shape class="strategic-home-wrapper__shape" />
     <div class="strategic-home-wrapper__content">
       <div class="strategic-home-wrapper__titles">
-        <h3>VISION</h3>
+        <h2>VISION</h2>
         <h1>Statement</h1>
       </div>
       <div class="vision-content">

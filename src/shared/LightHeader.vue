@@ -1,7 +1,7 @@
 <template>
   <nav class="header-wrapper" role="navigation" aria-label="main navigation">
     <div class="header-wrapper__brand">
-      <a class="header-wrapper__item" href="#home">
+      <a class="header-wrapper__item" href="#home" @click="closeNavMenu">
         <MFHLogo
           :class="
             isMobileView
@@ -18,7 +18,7 @@
           activeItem === 'home' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a href="#home" class="light-theme">
+        <a href="#home" @click="closeNavMenu" class="light-theme">
           home
         </a>
       </li>
@@ -30,6 +30,7 @@
       >
         <a
           href="javascript:void(0)"
+          @click="closeNavMenu"
           :class="[
             'header-wrapper__dropbtn light-theme',
             activeItem === 'people' || activeItem === 'business'
@@ -39,9 +40,10 @@
           >about</a
         >
 
-        <div :class="['dropdown-content']">
+        <div :class="['dropdown-content__light']">
           <a
             href="#about-people"
+            @click="closeNavMenu"
             :class="[
               'light-theme',
               activeItem === 'people' ? 'header-wrapper__is-active' : ''
@@ -55,6 +57,7 @@
               'light-theme',
               activeItem === 'business' ? 'header-wrapper__is-active' : ''
             ]"
+            @click="closeNavMenu('people')"
           >
             business
           </a>
@@ -66,7 +69,9 @@
           activeItem === 'services' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a href="#services" class="light-theme">services</a>
+        <a href="#services" @click="closeNavMenu" class="light-theme"
+          >services</a
+        >
       </li>
       <li
         :class="[
@@ -74,7 +79,9 @@
           activeItem === 'contact' ? 'header-wrapper__is-active' : ''
         ]"
       >
-        <a href="#contact" class="light-theme"> contact</a>
+        <a href="#contact" @click="closeNavMenu" class="light-theme">
+          contact</a
+        >
       </li>
       <li class="header-wrapper__item light-theme">
         <div @click="openNavMenu">
@@ -99,7 +106,7 @@
                   : ''
               ]"
             >
-              <a @click="closeNavMenu" href="#about-people">ABOUT</a>
+              <a @click="closeNavMenu('people')" href="#about-people">ABOUT</a>
             </li>
             <li :class="[activeItem === 'services' ? 'active' : '']">
               <a @click="closeNavMenu" href="#services">SERVICES</a>
@@ -118,7 +125,7 @@
 import MFHLogo from '../assets/images/logo-dark.svg';
 
 export default {
-  props: ['activeItem', 'isMobileView'],
+  props: ['activeItem', 'isMobileView', 'closeOurTeam'],
   data() {
     return {
       isNavMenuClicked: false
@@ -129,8 +136,11 @@ export default {
     openNavMenu() {
       this.isNavMenuClicked = true;
     },
-    closeNavMenu() {
+    closeNavMenu(item) {
       this.isNavMenuClicked = false;
+      if (item !== 'people') {
+        this.closeOurTeam();
+      }
     }
   }
 };

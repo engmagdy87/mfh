@@ -1,29 +1,45 @@
 <template>
   <div class="landing-wrapper">
     <div id="home" class="landing-wrapper__section">
-      <Header :isLogoAnimated="true" activeItem="home" />
+      <Header
+        :isLogoAnimated="true"
+        activeItem="home"
+        :closeOurTeam="closeOurTeam"
+      />
       <Signal />
     </div>
     <div
       id="vision"
       class="landing-wrapper__section landing-wrapper__section__dark"
     >
-      <Header :isLightLogo="true" activeItem="home" />
+      <Header
+        :isLightLogo="true"
+        activeItem="home"
+        :closeOurTeam="closeOurTeam"
+      />
       <Vision />
     </div>
     <div
       id="strategy"
       class="landing-wrapper__section landing-wrapper__section__dark"
     >
-      <Header :isLightLogo="true" activeItem="home" />
+      <Header
+        :isLightLogo="true"
+        activeItem="home"
+        :closeOurTeam="closeOurTeam"
+      />
       <Strategic />
     </div>
     <div
       id="about-people"
       class="landing-wrapper__section landing-wrapper__section__darkest"
     >
-      <Header :isLightLogo="true" activeItem="people" />
-      <AboutPeople :isMobileView="isMobileView" />
+      <Header
+        :isLightLogo="true"
+        activeItem="people"
+        :closeOurTeam="closeOurTeam"
+      />
+      <AboutPeople :isMobileView="isMobileView" ref="peopleComponent" />
     </div>
     <div
       id="about-business"
@@ -33,7 +49,11 @@
         getProperBackground('business')
       ]"
     >
-      <LightHeader activeItem="business" :isMobileView="isMobileView" />
+      <LightHeader
+        activeItem="business"
+        :isMobileView="isMobileView"
+        :closeOurTeam="closeOurTeam"
+      />
       <AboutBusiness />
     </div>
     <div
@@ -44,7 +64,11 @@
         getProperBackground('services')
       ]"
     >
-      <LightHeader activeItem="services" :isMobileView="isMobileView" />
+      <LightHeader
+        activeItem="services"
+        :isMobileView="isMobileView"
+        :closeOurTeam="closeOurTeam"
+      />
       <Services />
     </div>
     <div
@@ -55,7 +79,11 @@
         getProperBackground('contact')
       ]"
     >
-      <LightHeader activeItem="contact" :isMobileView="isMobileView" />
+      <LightHeader
+        activeItem="contact"
+        :isMobileView="isMobileView"
+        :closeOurTeam="closeOurTeam"
+      />
       <Contact />
     </div>
   </div>
@@ -97,6 +125,9 @@ export default {
       return `landing-wrapper__section__${section}--${
         this.isMobileView ? 'mob' : 'desk'
       }-${this.isWebpSupportedFlag ? 'webp' : 'jpg'}`;
+    },
+    closeOurTeam() {
+      this.$refs.peopleComponent.expandPeopleWidth();
     }
   },
   mounted() {

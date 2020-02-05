@@ -13,10 +13,16 @@
         <div>
           <p
             class="contact-about-wrapper__column--2__sector"
-            v-if="isMobileView"
             style="margin-left: 19%;"
+            v-if="isMobileView"
           >
             Head Office
+          </p>
+          <p
+            class="contact-about-wrapper__column--2__sector"
+            style="margin-left: 19%; margin-bottom:2%;"
+          >
+            <strong>Cairo</strong>
           </p>
           <div class="contact-about-wrapper__column--2__grid--item-head">
             <div><PhoneIcon /></div>
@@ -35,7 +41,6 @@
           <div class="contact-about-wrapper__column--2__grid--item-head">
             <div><PinIcon /></div>
             <div>
-              <p><strong>Cairo</strong></p>
               <p>27<sup>th</sup> Floor, North Tower 2005 C</p>
               <p>Nile City Towers Cornich El Nile</p>
               <p>Ramlet Beaulac</p>
@@ -110,7 +115,7 @@ export default {
       '(min-width:992px) and (max-width: 1199px)'
     );
     const landscapDesktop = window.matchMedia(
-      '(min-width: 1200px) and (max-width: 1500px) and (min-height: 400px) and (max-height: 800px)'
+      '(min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px)'
     );
     if (phone.matches || desktop.matches || landscapDesktop.matches) {
       this.isMobileView = true;
