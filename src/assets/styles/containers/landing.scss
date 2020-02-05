@@ -11,7 +11,9 @@
     height: $wrapper-height-mobile;
   }
   scroll-snap-type: y mandatory;
+  -webkit-snap-type: y mandatory;
   scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
@@ -22,8 +24,10 @@
     height: $wrapper-height-desktop;
     padding: $wrapper-padding-desktop;
     scroll-snap-align: start;
+    -webkit-scroll-snap-align: start;
     // Force scroll to next view not prevent fast scroll so flicking occur
     scroll-snap-stop: always;
+    -webkit-scroll-snap-stop: always;
     position: relative;
     box-sizing: border-box;
     @include is-mobile {
