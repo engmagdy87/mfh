@@ -36,6 +36,9 @@ export default {
       this.isSpinnerVisible = false;
       clearInterval(this.percentageCounter);
     }, this.spinnerTimer);
+    if (!("scrollBehavior" in document.documentElement.style)) {
+	await import("scroll-behavior-polyfill");
+}
   }
 };
 </script>
