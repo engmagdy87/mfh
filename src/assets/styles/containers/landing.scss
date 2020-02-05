@@ -3,7 +3,7 @@
 @import '../mixins.scss';
 
 .landing-wrapper {
-  overflow-y: scroll;
+  overflow-y: visible;
   overflow-x: hidden;
   height: $wrapper-height-desktop;
   @include is-mobile {
@@ -11,8 +11,8 @@
     height: $wrapper-height-mobile;
   }
   scroll-snap-type: y mandatory;
-  -webkit-snap-type: y mandatory;
   scroll-behavior: smooth;
+  -webkit-scroll-snap-type: y mandatory;
   -webkit-scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
