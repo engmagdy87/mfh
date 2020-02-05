@@ -6,15 +6,11 @@
         Medaf Finance Holding
       </p>
       <h1>Get in Touch</h1>
-      <p class="contact-about-wrapper__column--2__sector" v-if="!isMobileView">
-        Head Office
-      </p>
       <div class="contact-about-wrapper__column--2__grid">
         <div>
           <p
             class="contact-about-wrapper__column--2__sector"
-            style="margin-left: 19%;"
-            v-if="isMobileView"
+            style="margin-left: 19%; margin-bottom: 10px;"
           >
             Head Office
           </p>
@@ -42,8 +38,10 @@
             <div><PinIcon /></div>
             <div>
               <p>27<sup>th</sup> Floor, North Tower 2005 C</p>
-              <p>Nile City Towers Cornich El Nile</p>
-              <p>Ramlet Beaulac</p>
+              <p>Nile City Towers</p>
+              <p>Cornich El Nile, Ramlet Beaulac</p>
+              <p>Post Code: 11221</p>
+              <p>Cairo, Egypt</p>
             </div>
           </div>
           <a
@@ -52,9 +50,9 @@
           >
             <div
               class="contact-about-wrapper__column--2__grid--item-head"
-              v-if="!isMobileView"
+              style="margin-top: 0px;margin-bottom: 30px;"
             >
-              <span> GET DIRECTIONS </span><ArrowIcon />
+              <span>GET DIRECTIONS </span><ArrowIcon />
             </div>
           </a>
         </div>
@@ -77,17 +75,6 @@
               <p><strong>Kuwait City</strong></p>
             </div>
           </div>
-          <a
-            href="https://www.google.com/maps?ll=30.071548,31.227826&z=16&t=m&hl=en&gl=EG&mapclient=embed&cid=8346407453835388533"
-            target="__blank"
-          >
-            <div
-              class="contact-about-wrapper__column--2__grid--item-europe"
-              v-if="isMobileView"
-            >
-              <span> GET DIRECTIONS<ArrowIcon /> </span>
-            </div>
-          </a>
         </div>
       </div>
     </div>

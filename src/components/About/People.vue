@@ -30,7 +30,7 @@
           </p>
           <div class="people-about-wrapper__section-footer">
             <div>
-              <p class="num">+200</p>
+              <p class="num">+100</p>
               <p class="year">years</p>
             </div>
             <div class="finance-wrapper">

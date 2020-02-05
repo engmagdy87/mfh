@@ -103,5 +103,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/home/home.scss';
+@import '../../assets/styles/components/home/strategic.scss';
 </style>

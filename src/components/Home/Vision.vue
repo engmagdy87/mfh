@@ -1,17 +1,14 @@
 <template>
   <div
     v-if="isWebpSupportedFlag !== null"
-    :class="['strategic-home-wrapper', getProperBackground()]"
+    :class="['vision-home-wrapper', getProperBackground()]"
   >
-    <Shape class="strategic-home-wrapper__shape" />
-    <div class="strategic-home-wrapper__content">
-      <div class="strategic-home-wrapper__titles">
-        <h2>VISION</h2>
-        <h1>Statement</h1>
-      </div>
-      <div class="vision-content">
-        Our vision is to be the most admired investment partner in the MENA
-        region.
+    <div class="vision-home-wrapper__content">
+      <div class="vision-home-wrapper__titles">
+        <h1>
+          Our vision is to be the most admired investment partner in the MENA
+          region.
+        </h1>
       </div>
     </div>
     <Footer :innerPage="true" />
@@ -20,7 +17,6 @@
 
 <script>
 const Footer = () => import('../../shared/Footer');
-const Shape = () => import('../../assets/images/shape.svg');
 import isWebpSupported from '../../helper/WebpDetectionHelper';
 
 export default {
@@ -30,10 +26,10 @@ export default {
       isMobileView: false
     };
   },
-  components: { Footer, Shape },
+  components: { Footer },
   methods: {
     getProperBackground() {
-      return `strategic-home-wrapper__background--${
+      return `vision-home-wrapper__background--${
         this.isMobileView ? 'mob' : 'desk'
       }-${this.isWebpSupportedFlag ? 'webp' : 'jpg'}`;
     }
@@ -58,5 +54,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/home/home.scss';
+@import '../../assets/styles/components/home/vision.scss';
 </style>
