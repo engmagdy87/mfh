@@ -28,20 +28,14 @@ export default {
       return setInterval(() => {
         this.spinner.value += 1;
       }, this.spinner.timer);
-    },
-    async loadScrollSmoothPolyfill() {
-      if (!('scrollBehavior' in document.documentElement.style)) {
-        await import('scroll-behavior-polyfill');
-      }
     }
   },
-  async mounted() {
+  mounted() {
     this.percentageCounter();
     setTimeout(() => {
       this.isSpinnerVisible = false;
       clearInterval(this.percentageCounter);
     }, this.spinnerTimer);
-    await this.loadScrollSmoothPolyfill();
   }
 };
 </script>
