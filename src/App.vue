@@ -33,15 +33,15 @@ export default {
       if (!('scrollBehavior' in document.documentElement.style)) {
         await import('scroll-behavior-polyfill');
       }
-    },
-    async mounted() {
-      this.percentageCounter();
-      setTimeout(() => {
-        this.isSpinnerVisible = false;
-        clearInterval(this.percentageCounter);
-      }, this.spinnerTimer);
-      await this.loadScrollSmoothPolyfill();
     }
+  },
+  async mounted() {
+    this.percentageCounter();
+    setTimeout(() => {
+      this.isSpinnerVisible = false;
+      clearInterval(this.percentageCounter);
+    }, this.spinnerTimer);
+    await this.loadScrollSmoothPolyfill();
   }
 };
 </script>
