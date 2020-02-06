@@ -51,7 +51,7 @@
           </a>
         </div>
       </div>
-      <div class="people-about-wrapper__team" id="our-people">
+      <div class="people-about-wrapper__team">
         <span
           class="people-about-wrapper__team__board"
           :style="isOurPeopleClicked ? 'display:none' : 'display:block'"
