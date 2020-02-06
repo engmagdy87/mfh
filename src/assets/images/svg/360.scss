@@ -35,25 +35,140 @@ $background-delay: 10s;
   fill: none;
 }
 
-.signal {
-  opacity: 0;
+.signal0,
+.signal1,
+.signal2,
+.signal3,
+.signal4,
+.signal5,
+.signal8,
+.signal10,
+.signal12,
+.signal14,
+.signal16 {
+  fill: transparent;
+}
+
+.signal6 {
+  animation-delay: 6 * $delay-time-offset;
   animation-name: signal-keyframes;
   animation-duration: $signal-time;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
 }
-
-@for $i from 0 to 48 {
-  .signal#{$i} {
-    animation-delay: $i * $delay-time-offset;
-  }
+.signal7 {
+  animation-delay: 1 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal9 {
+  animation-delay: 2 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal11 {
+  animation-delay: 3 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal13 {
+  animation-delay: 4 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal15 {
+  animation-delay: 5 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal17 {
+  animation-delay: 6 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal18 {
+  animation-delay: 7 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal19 {
+  animation-delay: 8 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal20 {
+  animation-delay: 9 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+.signal21 {
+  animation-delay: 10 * $delay-time-offset;
+  animation-name: signal-keyframes;
+  animation-duration: $signal-time;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom left;
+  transform-box: fill-box;
 }
 
 @keyframes signal-keyframes {
-  50% {
-    opacity: 1;
+  0% {
+    transform: rotate(0deg);
+    fill: #c4dded;
+  }
+
+  20% {
+    fill: transparent;
+  }
+  25% {
+    fill: transparent;
+  }
+  75% {
+    fill: transparent;
+  }
+  90% {
+    fill: #c4dded;
   }
   100% {
-    opacity: 0;
+    transform: rotate(360deg);
   }
 }
 
