@@ -2,17 +2,18 @@
   <div class="app-wrapper">
     <transition name="fade" mode="out-in">
       <SplashScreen key="1" v-if="isSpinnerVisible" />
-      <router-view key="2" v-else />
+      <Landing key="2" v-else />
     </transition>
   </div>
 </template>
 
 <script>
+const Landing = () => import('./containers/Landing');
 const SplashScreen = () => import('./components/SplashScreen');
 
 export default {
   name: 'app',
-  components: { SplashScreen },
+  components: { Landing, SplashScreen },
   data() {
     return {
       isSpinnerVisible: true,

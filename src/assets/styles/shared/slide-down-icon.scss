@@ -33,7 +33,7 @@ $background-time: 6s;
     content: '';
     border: 1px solid $light-black;
     left: 7px;
-    border-radius: 10px;
+    border-radius: 9px;
     animation: mouse 2s infinite, background-keyframes $background-time;
     animation-fill-mode: forwards;
     @include is-mobile {
@@ -45,27 +45,27 @@ $background-time: 6s;
   &__up-line {
     border-left: 1px solid $light-black;
     height: 80px;
-    margin-left: 12px;
+    margin-left: 11px;
     margin-bottom: 10px;
     animation-name: background-keyframes;
     animation-duration: $background-time;
     animation-fill-mode: forwards;
     @include is-mobile {
       height: 40px;
-      margin-left: 9px;
+      margin-left: 8px;
     }
   }
   &__down-line {
     border-left: 1px solid $light-black;
     height: 40px;
     margin-top: 10px;
-    margin-left: 12px;
+    margin-left: 11px;
     animation-name: background-keyframes;
     animation-duration: $background-time;
     animation-fill-mode: forwards;
     @include is-mobile {
       height: 20px;
-      margin-left: 9px;
+      margin-left: 8px;
     }
   }
 }
