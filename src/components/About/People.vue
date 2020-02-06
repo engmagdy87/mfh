@@ -51,7 +51,7 @@
           </a>
         </div>
       </div>
-      <div class="people-about-wrapper__team">
+      <div class="people-about-wrapper__team" id="our-people">
         <span
           class="people-about-wrapper__team__board"
           :style="isOurPeopleClicked ? 'display:none' : 'display:block'"
@@ -70,7 +70,6 @@
             v-for="(member, index) in teamData"
             :class="['slide', `slide${index}`]"
             :key="index"
-            :id="index === targetSlideId ? 'our-people' : ''"
           >
             <TeamMember
               :member="member"
