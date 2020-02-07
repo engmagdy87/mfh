@@ -1,7 +1,6 @@
 import Vue from 'vue';
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from 'smoothscroll-polyfill/dist/smoothscroll';
 
-// kick off the polyfill!
 smoothscroll.polyfill();
 
 const App = () => import('./App.vue');
