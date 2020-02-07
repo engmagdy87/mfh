@@ -1,14 +1,13 @@
 @import '../color-palette.scss';
-@import '../variables.scss';
 @import '../mixins.scss';
 
 .landing-wrapper {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: $wrapper-height-desktop;
+  height: 100vh;
   @include is-mobile {
     // Android Google Chrome Height Page Bottom Hide Fix
-    height: $wrapper-height-mobile;
+    height: 100%;
   }
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -19,17 +18,17 @@
   }
 
   &__section {
-    height: $wrapper-height-desktop;
-    padding: $wrapper-padding-desktop;
+    height: 100vh;
+    padding: 5%;
     scroll-snap-align: start;
     // Force scroll to next view not prevent fast scroll so flicking occur
     scroll-snap-stop: always;
     position: relative;
     box-sizing: border-box;
     @include is-mobile {
-      padding: $wrapper-padding-mobile;
+      padding: 8%;
       // Android Google Chrome Height Page Bottom Hide Fix
-      height: $wrapper-height-mobile;
+      height: 100%;
     }
     &__dark {
       background-color: $light-black;

@@ -283,7 +283,6 @@
     @include is-desktop {
       bottom: 10px;
       left: 50%;
-      // display: flex;
     }
     @media (min-height: 767px) {
       bottom: 15%;
@@ -300,6 +299,8 @@
     }
   }
 }
+
+// Override vue-carousel package css classes
 
 button:focus {
   outline: 0 !important;
@@ -332,13 +333,6 @@ button.VueCarousel-dot {
   @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
     flex-basis: 14% !important;
   }
-
-  // @include is-desktop {
-  //   flex-basis: 15% !important;
-  // }
-  // @include is-large-desktop {
-  //   flex-basis: 15% !important;
-  // }
   @include is-very-large-desktop {
     flex-basis: 12.3% !important;
   }
@@ -346,9 +340,6 @@ button.VueCarousel-dot {
 
 .carousel {
   margin-top: 20px;
-  // @include is-tablet {
-  //   margin-top: 80px;
-  // }
   @media (min-width: 768px) and (max-width: 991px) and (min-height: 701px) {
     margin-top: 0px;
   }
