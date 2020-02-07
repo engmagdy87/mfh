@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
-    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.10",
     "vue-carousel": "^0.18.0"
   },

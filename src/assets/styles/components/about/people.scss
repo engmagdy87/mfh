@@ -324,14 +324,17 @@ button.VueCarousel-dot {
     flex-basis: 60% !important;
     margin: 5% 20% 0 20%;
   }
-  @media (min-width: 768px) and (max-width: 991px) and (min-height: 400px) and (max-height: 700px) {
+  @media (min-width: 768px) and (max-width: 1199px) and (min-height: 400px) and (max-height: 700px) {
     flex-basis: 50% !important;
   }
-  @media (min-width: 768px) and (max-width: 991px) and (min-height: 701px) {
+  @media (min-width: 768px) and (max-width: 1199px) and (min-height: 701px) {
     flex-basis: 25% !important;
   }
   @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 400px) and (max-height: 800px) {
     flex-basis: 14% !important;
+  }
+  @media (min-width: 1200px) and (max-width: 1600px) and (min-height: 801px) {
+    flex-basis: 20% !important;
   }
   @include is-very-large-desktop {
     flex-basis: 12.3% !important;
